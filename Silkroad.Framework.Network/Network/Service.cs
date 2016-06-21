@@ -1,4 +1,5 @@
 ﻿using Silkroad.Framework.Common.Config;
+using Silkroad.Framework.Common.Objects;
 using Silkroad.Framework.Utility;
 
 namespace Silkroad.Framework.Common
@@ -11,6 +12,7 @@ namespace Silkroad.Framework.Common
         public SessionPool SessionPool { get; private set; }
         public SessionManager SessionManager { get; private set; }
         public PacketManager PacketManager { get; private set; }
+        public CertifiactionManager CertificationManager { get; set; }
 
         public Service(ServiceSettings settings)
         {
@@ -20,6 +22,7 @@ namespace Silkroad.Framework.Common
             this.SessionPool = new SessionPool(this);
             this.SessionManager = new SessionManager(this);
             this.PacketManager = new PacketManager(this);
+            this.CertificationManager = new CertifiactionManager(this);
         }
 
         public bool Start()

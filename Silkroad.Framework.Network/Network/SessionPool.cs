@@ -43,7 +43,8 @@ namespace Silkroad.Framework.Common
                 return false;
 
             //1 session processing thread for each CPU core
-            _threadCount = Environment.ProcessorCount;
+            //_threadCount = Environment.ProcessorCount;
+            _threadCount = 1;
 
             _sessionThreads = new Thread[_threadCount];
 

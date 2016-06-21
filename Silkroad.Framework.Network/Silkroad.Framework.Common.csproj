@@ -44,6 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Objects\CertifiactionManager.cs" />
+    <Compile Include="Objects\SecurityDesc\srSecurityDescriptionGroupAssign.cs" />
+    <Compile Include="Objects\Certification\srGlobalOperation.cs" />
+    <Compile Include="Objects\Certification\srGlobalService.cs" />
+    <Compile Include="Objects\Certification\srNodeData.cs" />
+    <Compile Include="Objects\Certification\srNodeLink.cs" />
+    <Compile Include="Objects\Certification\srNodeType.cs" />
+    <Compile Include="Objects\Certification\srOperationType.cs" />
+    <Compile Include="Objects\Certification\srServiceType.cs" />
+    <Compile Include="Objects\Certification\srShard.cs" />
+    <Compile Include="Objects\Certification\srUnknown.cs" />
     <Compile Include="IPlugin.cs" />
     <Compile Include="Network\PacketManager.cs" />
     <Compile Include="Network\PacketResult.cs" />
@@ -56,6 +67,8 @@
     <Compile Include="Security\PacketException.cs" />
     <Compile Include="Security\PacketReader.cs" />
     <Compile Include="Security\PacketWriter.cs" />
+    <Compile Include="Objects\SecurityDesc\srSecurityDescription.cs" />
+    <Compile Include="Objects\SecurityDesc\srSecurityDescriptionGroup.cs" />
     <Compile Include="Security\SecurityException.cs" />
     <Compile Include="Security\SecurityManager.cs" />
     <Compile Include="Security\TransferBuffer.cs" />
@@ -78,6 +91,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

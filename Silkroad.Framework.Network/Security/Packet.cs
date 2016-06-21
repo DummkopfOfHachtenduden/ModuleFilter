@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Silkroad.Framework.Utility;
+using System;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Silkroad.Framework.Common.Security
@@ -400,6 +402,46 @@ namespace Silkroad.Framework.Common.Security
             }
         }
 
+        public string ReadPaddedString(int codepage, ushort length)
+        {
+            lock (_lock)
+            {
+                if (!_locked)
+                {
+                    throw new PacketException("Cannot Read from an unlocked Packet.");
+                }
+
+                byte[] bytes = _reader.ReadBytes(length);
+
+                return Encoding.GetEncoding(codepage).GetString(bytes).Trim('\0');
+            }
+        }
+
+        public string ReadPaddedString16()
+        {
+            return this.ReadPaddedString(1252, 16);
+        }
+
+        public string ReadPaddedString32()
+        {
+            return this.ReadPaddedString(1252, 32);
+        }
+
+        public string ReadPaddedString64()
+        {
+            return this.ReadPaddedString(1252, 64);
+        }
+
+        public string ReadPaddedString128()
+        {
+            return this.ReadPaddedString(1252, 128);
+        }
+
+        public string ReadPaddedString256()
+        {
+            return this.ReadPaddedString(1252, 256);
+        }
+
         public string ReadUnicode()
         {
             lock (_lock)
@@ -428,6 +470,12 @@ namespace Silkroad.Framework.Common.Security
                                     _reader.ReadUInt16(), _reader.ReadUInt16(), _reader.ReadUInt16(), //HH:MM:SS
                                     _reader.ReadInt32()); //FFF
             }
+        }
+
+        public T ReadStruct<T>() where T : struct
+        {
+            var buffer = this.ReadByteArray(Marshal.SizeOf(typeof(T)));
+            return Unmanaged.BufferToStruct<T>(buffer);
         }
 
         //public T ReadEnum<T>()
@@ -856,6 +904,52 @@ namespace Silkroad.Framework.Common.Security
             }
         }
 
+        public void WritePaddedString(string value, int padding)
+        {
+            lock (_lock)
+            {
+                if (_locked)
+                {
+                    throw new PacketException("Cannot Write to a locked Packet.");
+                }
+
+                var buffer = Encoding.ASCII.GetBytes(value);
+                if (buffer.Length >= padding)
+                    throw new ArgumentOutOfRangeException(nameof(value));
+
+                _writer.Write(buffer);
+                for (int i = 0; i < padding - buffer.Length; i++)
+                {
+                    _writer.Write((byte)0);
+                }
+            }
+        }
+
+        public void WritePaddedString16(string value)
+        {
+            this.WritePaddedString(value, 16);
+        }
+
+        public void WritePaddedString32(string value)
+        {
+            this.WritePaddedString(value, 32);
+        }
+
+        public void WritePaddedString64(string value)
+        {
+            this.WritePaddedString(value, 64);
+        }
+
+        public void WritePaddedString128(string value)
+        {
+            this.WritePaddedString(value, 128);
+        }
+
+        public void WritePaddedString256(string value)
+        {
+            this.WritePaddedString(value, 256);
+        }
+
         public void WriteUnicode(string value)
         {
             lock (_lock)
@@ -1057,6 +1151,20 @@ namespace Silkroad.Framework.Common.Security
                 byte[] bytes = Encoding.Unicode.GetBytes(value.ToString());
 
                 _writer.Write((ushort)value.ToString().Length);
+                _writer.Write(bytes);
+            }
+        }
+
+        public void WriteStruct<T>(T value) where T : struct
+        {
+            lock (_lock)
+            {
+                if (_locked)
+                {
+                    throw new PacketException("Cannot Write to a locked Packet.");
+                }
+
+                var bytes = Unmanaged.StructToBuffer(value);
                 _writer.Write(bytes);
             }
         }

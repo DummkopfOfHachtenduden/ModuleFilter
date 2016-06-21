@@ -18,6 +18,7 @@
   <Service Name="DownloadServer #01" Type="DownloadServer" IP ="192.168.178.10" Port="20001">
     <Security Blowfish="false" SecurityBytes="false" Handshake="false" />
     <Certificator IP="192.168.178.15" Port="15880" />
+    <Server IP="192.168.178.10" Port="15880" />
   </Service>
 
   <Service Name="FarmManager #01" Type="FarmManager" IP ="192.168.178.10" Port="20002">

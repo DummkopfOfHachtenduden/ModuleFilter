@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Tools.ModuleFilter", "Silkroad.Tools.ModuleFilter\Silkroad.Tools.ModuleFilter.csproj", "{033B4F41-890B-4523-998C-A049C41149FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Framework.Common", "Silkroad.Framework.Network\Silkroad.Framework.Common.csproj", "{846181E6-0314-4BE3-8E6B-45DB6E25F957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Framework.Utility", "Silkroad.Framework.Utility\Silkroad.Framework.Utility.csproj", "{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{3C89E165-65C9-48BB-B5F0-591CFC509792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Plugin.Gateway", "Silkroad.Plugin.Gateway\Silkroad.Plugin.Gateway.csproj", "{6E338C76-6CEE-41A0-8EB4-CE32608097B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{033B4F41-890B-4523-998C-A049C41149FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033B4F41-890B-4523-998C-A049C41149FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033B4F41-890B-4523-998C-A049C41149FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033B4F41-890B-4523-998C-A049C41149FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846181E6-0314-4BE3-8E6B-45DB6E25F957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846181E6-0314-4BE3-8E6B-45DB6E25F957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846181E6-0314-4BE3-8E6B-45DB6E25F957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846181E6-0314-4BE3-8E6B-45DB6E25F957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E338C76-6CEE-41A0-8EB4-CE32608097B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E338C76-6CEE-41A0-8EB4-CE32608097B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E338C76-6CEE-41A0-8EB4-CE32608097B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E338C76-6CEE-41A0-8EB4-CE32608097B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E338C76-6CEE-41A0-8EB4-CE32608097B7} = {3C89E165-65C9-48BB-B5F0-591CFC509792}
+	EndGlobalSection
+EndGlobal

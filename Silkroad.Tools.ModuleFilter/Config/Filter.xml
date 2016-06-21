@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<filter>
+  <Logger Name="Instance" LogLevel="Trace" />
+  <Logger Name="Silkroad.Plugin.Gateway" LogLevel="Trace" />
+  <Logger Name="Silkroad.Plugin.Download" LogLevel="Trace" />
+  <Logger Name="Silkroad.Plugin.Farm" LogLevel="Trace" />
+  <!--TODO: Have plugins create their own logger-->
+
+  <Plugin Name="Silkroad.Plugin.Gateway" ServiceType="GatewayServer" />
+  <Plugin Name="Silkroad.Plugin.Download" ServiceType="DownloadServer" />
+  <Plugin Name="Silkroad.Plugin.Farm" ServiceType="FarmManager" />
+
+  <Service Name="GatewayServer #1" Type="GatewayServer" IP ="192.168.178.10" Port="15880">
+    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15880" />
+  </Service>
+
+  <Service Name="DownloadServer #01" Type="DownloadServer" IP ="192.168.178.10" Port="20001">
+    <Security Blowfish="false" SecurityBytes="false" Handshake="false" />
+    <Certificator IP="192.168.178.15" Port="15880" />
+  </Service>
+
+  <Service Name="FarmManager #01" Type="FarmManager" IP ="192.168.178.10" Port="20002">
+    <Security Blowfish="false" SecurityBytes="false" Handshake="false" />
+    <Certificator IP="192.168.178.15" Port="15880" />
+  </Service>
+</filter>

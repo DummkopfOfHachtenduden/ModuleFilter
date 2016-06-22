@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -68,6 +68,10 @@
     <ProjectReference Include="..\Silkroad.Plugin.Gateway\Silkroad.Plugin.Gateway.csproj">
       <Project>{6e338c76-6cee-41a0-8eb4-ce32608097b7}</Project>
       <Name>Silkroad.Plugin.Gateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Silkroad.Plugin.Global\Silkroad.Plugin.Global.csproj">
+      <Project>{933dcc5b-c9a8-4493-9274-1f527a363a30}</Project>
+      <Name>Silkroad.Plugin.Global</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

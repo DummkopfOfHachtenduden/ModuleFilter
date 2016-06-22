@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}</ProjectGuid>
+    <ProjectGuid>{933DCC5B-C9A8-4493-9274-1F527A363A30}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Silkroad.Framework.Utility</RootNamespace>
-    <AssemblyName>Silkroad.Framework.Utility</AssemblyName>
+    <RootNamespace>Silkroad.Plugin.Global</RootNamespace>
+    <AssemblyName>Silkroad.Plugin.Global</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,18 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caller.cs" />
-    <Compile Include="StaticLogger.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unmanaged.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <ProjectReference Include="..\Silkroad.Framework.Network\Silkroad.Framework.Common.csproj">
+      <Project>{846181e6-0314-4be3-8e6b-45db6e25f957}</Project>
+      <Name>Silkroad.Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Silkroad.Framework.Utility\Silkroad.Framework.Utility.csproj">
+      <Project>{b68f9d08-d251-4a1b-911d-6f19ca38dccd}</Project>
+      <Name>Silkroad.Framework.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

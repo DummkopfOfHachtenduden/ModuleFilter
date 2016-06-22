@@ -6,22 +6,38 @@
   <Logger Name="Silkroad.Plugin.Farm" LogLevel="Trace" />
   <!--TODO: Have plugins create their own logger-->
 
+  <Plugin Name="Silkroad.Plugin.Certification" ServiceType="Certification" />
+  <Plugin Name="Silkroad.Plugin.Global" ServiceType="GlobalManager" />
+  <Plugin Name="Silkroad.Plugin.Machine" ServiceType="MachineManager" />
   <Plugin Name="Silkroad.Plugin.Gateway" ServiceType="GatewayServer" />
   <Plugin Name="Silkroad.Plugin.Download" ServiceType="DownloadServer" />
   <Plugin Name="Silkroad.Plugin.Farm" ServiceType="FarmManager" />
+  <Plugin Name="Silkroad.Plugin.Agent" ServiceType="AgentServer" />
+  <Plugin Name="Silkroad.Plugin.Shard" ServiceType="SR_ShardManager" />
+  <Plugin Name="Silkroad.Plugin.Game" ServiceType="SR_GameServer" />  
+  <Plugin Name="Silkroad.Plugin.SMC" ServiceType="SMC" />
 
-  <Service Name="GatewayServer #Cert" Type="GatewayServer" IP ="192.168.178.15" Port="20000">
+  <Service Name="GlobalManager #CERT" Type="GlobalManager" IP ="192.168.178.15" Port="20000">
+    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15880" />
+    
+    <Redirect Desc="GatewayServer" NodeLink="1228" Port="20001"/>
+    <Redirect Desc="MachineManager" NodeLink="1229" Port="20002"/>    
+    <Redirect Desc="DownloadServer" NodeLink="1230" Port="20003"/>
+  </Service>
+
+  <Service Name="MachineManager #01" Type="MachineManager" IP ="192.168.178.15" Port="20001">
     <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
     <Certificator IP="192.168.178.15" Port="15880" />
   </Service>
 
-  <Service Name="GatewayServer #01" Type="GatewayServer" IP ="192.168.178.15" Port="30000">
+  <Service Name="GatewayServer #01" Type="GatewayServer" IP ="192.168.178.15" Port="20002">
     <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
-    <Certificator IP="192.168.178.15" Port="15880" />    
+    <Certificator IP="192.168.178.15" Port="15880" />
   </Service>
 
-  <Service Name="FarmManager #01" Type="FarmManager" IP ="192.168.178.15" Port="20002">
-    <Security Blowfish="false" SecurityBytes="false" Handshake="false" />
+  <Service Name="DownloadServer #01" Type="DownloadServer" IP ="192.168.178.15" Port="20003">
+    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
     <Certificator IP="192.168.178.15" Port="15880" />
   </Service>
 </filter>
@@ -44,3 +60,6 @@
 <!--CPRJ_Client-->
 <!--CPRJ_GameServer-->
 <!--CPRJ_ShardManager-->
+
+<!-- Default Security settings -->
+<!--<Security Blowfish="true" SecurityBytes="false" Handshake="true" />-->

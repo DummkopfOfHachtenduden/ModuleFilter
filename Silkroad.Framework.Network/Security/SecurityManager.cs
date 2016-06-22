@@ -315,6 +315,9 @@ namespace Silkroad.Framework.Common.Security
         //*/
         private object m_class_lock;
 
+        public string IdentityName { get { return m_identity_name; } }
+        public byte IdentityFlag { get { return m_identity_flag; } }
+
         #region CoreSecurityFunction
 
         // This function's logic was written by jMerlin as part of the article "How to generate the security bytes for SRO"

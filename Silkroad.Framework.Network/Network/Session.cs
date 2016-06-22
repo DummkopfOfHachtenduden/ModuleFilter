@@ -137,7 +137,7 @@ namespace Silkroad.Framework.Common
                 if (nReceived == 0)
                 {
                     StaticLogger.Instance.Fatal($"{Caller.GetMemberName()}: 0 bytes received!");
-                    //this.Disconnect();
+                    this.Disconnect();
                     return;
                 }
 
@@ -180,7 +180,8 @@ namespace Silkroad.Framework.Common
                     }
                 }
 
-                this.TransferToClient();
+                //this.TransferToClient();
+                this.TransferTo(_clientSecurity, _clientSocket);
                 this.BeginReceiveFromCertificator();
             }
             catch (Exception ex)
@@ -202,8 +203,8 @@ namespace Silkroad.Framework.Common
                         if (_destroyed)
                             return;
 
-                        var packet = kvp[i].Value;
 #if TRACE
+                        var packet = kvp[i].Value;
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[P->S][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
 #endif
@@ -296,7 +297,7 @@ namespace Silkroad.Framework.Common
                         switch (result.Action)
                         {
                             case PacketResultAction.Ignore:
-                                return;
+                                continue;
 
                             case PacketResultAction.Disconnect:
                                 this.Disconnect();
@@ -317,7 +318,8 @@ namespace Silkroad.Framework.Common
                     }
                 }
 
-                this.TransferToCertificator();
+                //this.TransferToCertificator();
+                this.TransferTo(_certificatorSecurity, _certificatorSocket);
                 this.BeginReceiveFromClient();
             }
             catch (Exception ex)
@@ -339,8 +341,8 @@ namespace Silkroad.Framework.Common
                         if (_destroyed)
                             return;
 
-                        var packet = kvp[i].Value;
 #if TRACE
+                        var packet = kvp[i].Value;
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[P->C][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
 #endif
@@ -401,6 +403,12 @@ namespace Silkroad.Framework.Common
                     {
                         if (_destroyed)
                             return;
+
+#if TRACE
+                        var packet = kvp[i].Value;
+                        if (StaticLogger.Instance.IsTraceEnabled)
+                            StaticLogger.Instance.Trace("[P->{7}][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine, manager.IdentityName);
+#endif
 
                         socket.BeginSend(kvp[i].Key.Buffer, 0, kvp[i].Key.Buffer.Length, SocketFlags.None, BeginSendCallback, socket);
                     }

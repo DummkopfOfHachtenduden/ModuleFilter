@@ -66,7 +66,7 @@ namespace Silkroad.Framework.Common
                                              _service.Settings.Handshake);
 
             _certificatorSecurity = new SecurityManager();
-            //_certificatorSecurity.ChangeIdentity("GatewayServer", 0);
+            _certificatorSecurity.ChangeIdentity(_service.Settings.Type.ToString(), 0);
 
             //create state
             _state = new SessionState();
@@ -80,8 +80,8 @@ namespace Silkroad.Framework.Common
 
             if (_certificatorSocket.Connected)
             {
-                this.BeginReceiveFromClient();
                 this.BeginReceiveFromCertificator();
+                this.BeginReceiveFromClient();
 
                 return true;
             }
@@ -120,7 +120,7 @@ namespace Silkroad.Framework.Common
         {
             try
             {
-                _certificatorSocket.BeginReceive(_certificatorBuffer, 0, _certificatorBuffer.Length, SocketFlags.None, BeginReceiveFromModuleCallback, null);
+                _certificatorSocket.BeginReceive(_certificatorBuffer, 0, _certificatorBuffer.Length, SocketFlags.None, BeginReceiveFromCertificatorCallback, null);
             }
             catch (Exception ex)
             {
@@ -129,15 +129,15 @@ namespace Silkroad.Framework.Common
             }
         }
 
-        private void BeginReceiveFromModuleCallback(IAsyncResult ar)
+        private void BeginReceiveFromCertificatorCallback(IAsyncResult ar)
         {
             try
             {
                 var nReceived = _certificatorSocket.EndReceive(ar);
                 if (nReceived == 0)
                 {
-                    StaticLogger.Instance.Fatal("BeginReceiveFromModuleCallback: 0 bytes received!");
-                    this.Disconnect();
+                    StaticLogger.Instance.Fatal($"{Caller.GetMemberName()}: 0 bytes received!");
+                    //this.Disconnect();
                     return;
                 }
 
@@ -149,9 +149,8 @@ namespace Silkroad.Framework.Common
                     {
                         var packet = packets[i];
 #if TRACE
-                        var packet_bytes = packet.GetBytes();
                         if (StaticLogger.Instance.IsTraceEnabled)
-                            StaticLogger.Instance.Trace("[C->M][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet_bytes.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet_bytes.HexDump(), Environment.NewLine);
+                            StaticLogger.Instance.Trace("[S->P][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
 #endif
                         if (packet.Opcode == 0x5000 || packet.Opcode == 0x9000)
                             continue;
@@ -202,6 +201,12 @@ namespace Silkroad.Framework.Common
                     {
                         if (_destroyed)
                             return;
+
+                        var packet = kvp[i].Value;
+#if TRACE
+                        if (StaticLogger.Instance.IsTraceEnabled)
+                            StaticLogger.Instance.Trace("[P->S][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
+#endif
 
                         _certificatorSocket.BeginSend(kvp[i].Key.Buffer, 0, kvp[i].Key.Buffer.Length, SocketFlags.None, BeginSendToCertificatorCallback, null);
                     }
@@ -268,7 +273,7 @@ namespace Silkroad.Framework.Common
                 var nReceived = _clientSocket.EndReceive(ar);
                 if (nReceived == 0)
                 {
-                    StaticLogger.Instance.Fatal("BeginReceiveFromClientCallback: 0 bytes received!");
+                    StaticLogger.Instance.Fatal($"{Caller.GetMemberName()}: 0 bytes received!");
                     this.Disconnect();
                     return;
                 }
@@ -281,33 +286,32 @@ namespace Silkroad.Framework.Common
                     {
                         var packet = packets[i];
 #if TRACE
-                        var packet_bytes = packet.GetBytes();
                         if (StaticLogger.Instance.IsTraceEnabled)
-                            StaticLogger.Instance.Trace("[M->C][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet_bytes.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet_bytes.HexDump(), Environment.NewLine);
+                            StaticLogger.Instance.Trace("[C->P][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
 #endif
                         if (packet.Opcode == 0x5000 || packet.Opcode == 0x9000 || packet.Opcode == 0x2001)
                             continue;
 
-                        //var result = _service.PacketManager.Handle(PacketSource.Module, this, packet);
-                        //switch (result.Action)
-                        //{
-                        //    case PacketResultAction.Ignore:
-                        //        return;
+                        var result = _service.PacketManager.Handle(PacketSource.Module, this, packet);
+                        switch (result.Action)
+                        {
+                            case PacketResultAction.Ignore:
+                                return;
 
-                        //    case PacketResultAction.Disconnect:
-                        //        this.Disconnect();
-                        //        return;
+                            case PacketResultAction.Disconnect:
+                                this.Disconnect();
+                                return;
 
-                        //    case PacketResultAction.Replace:
-                        //        foreach (var replacedPacket in result)
-                        //            _moduleSecurity.Send(replacedPacket);
-                        //        continue;
+                            case PacketResultAction.Replace:
+                                foreach (var replacedPacket in result)
+                                    _certificatorSecurity.Send(replacedPacket);
+                                continue;
 
-                        //    case PacketResultAction.Response:
-                        //        foreach (var replacedPacket in result)
-                        //            _clientSecurity.Send(replacedPacket);
-                        //        continue;
-                        //}
+                            case PacketResultAction.Response:
+                                foreach (var replacedPacket in result)
+                                    _clientSecurity.Send(replacedPacket);
+                                continue;
+                        }
 
                         _certificatorSecurity.Send(packet);
                     }
@@ -334,6 +338,12 @@ namespace Silkroad.Framework.Common
                     {
                         if (_destroyed)
                             return;
+
+                        var packet = kvp[i].Value;
+#if TRACE
+                        if (StaticLogger.Instance.IsTraceEnabled)
+                            StaticLogger.Instance.Trace("[P->C][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
+#endif
 
                         _clientSocket.BeginSend(kvp[i].Key.Buffer, 0, kvp[i].Key.Buffer.Length, SocketFlags.None, BeginSendToClientCallback, null);
                     }

@@ -1,37 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace Silkroad.Framework.Common.Config
 {
     public class ServiceSettings
     {
+        public string Name { get; private set; }
+        public ServiceType Type { get; private set; }
+        public string IP { get; private set; }
+        public ushort Port { get; private set; }
+
+        public ServiceSecurity Security { get; private set; }
+        public ServiceCertificator Certificator { get; private set; }
+
+        private Dictionary<uint, ServiceRedirect> _redirections;
+        public IReadOnlyDictionary<uint, ServiceRedirect> Redirections { get { return _redirections; } }
+
         public ServiceSettings(XmlNode node)
         {
             this.Name = node.Attributes["Name"].Value;
-            this.Type = (ServiceType)Enum.Parse(typeof(ServiceType), node.Attributes["Type"].Value);
-            this.IP = node.Attributes["IP"].Value;
-            this.Port = ushort.Parse(node.Attributes["Port"].Value);
+            this.Type = (ServiceType)Enum.Parse(typeof(ServiceType), node.Attributes[nameof(this.Type)].Value);
+            this.IP = node.Attributes[nameof(this.IP)].Value;
+            this.Port = ushort.Parse(node.Attributes[nameof(this.Port)].Value);
 
-            var securityNode = node["Security"];
-            this.Blowfish = bool.Parse(securityNode.Attributes[nameof(this.Blowfish)].Value);
-            this.SecurityBytes = bool.Parse(securityNode.Attributes[nameof(this.SecurityBytes)].Value);
-            this.Handshake = bool.Parse(securityNode.Attributes[nameof(this.Handshake)].Value);
+            this.Security = new ServiceSecurity(node["Security"]);
+            this.Certificator = new ServiceCertificator(node["Certificator"]);
 
-            var certificatorNode = node["Certificator"];
-            this.CertificatorIP = certificatorNode.Attributes["IP"].Value;
-            this.CertificatorPort = ushort.Parse(certificatorNode.Attributes["Port"].Value);
+            _redirections = new Dictionary<uint, ServiceRedirect>();
+            var redirectionNode = node["redirections"];
+            if (redirectionNode == null)
+                return;
+
+            foreach (XmlNode redirectNode in redirectionNode)
+            {
+                if (redirectNode.NodeType != XmlNodeType.Element)
+                    continue;
+
+                var redirect = new ServiceRedirect(redirectNode);
+                _redirections.Add(redirect.CoordID, redirect);
+            }
         }
-
-        public string Name { get; internal set; }
-        public ServiceType Type { get; set; }
-        public string IP { get; set; }
-        public ushort Port { get; set; }
-
-        public bool Blowfish { get; set; }
-        public bool SecurityBytes { get; set; }
-        public bool Handshake { get; set; }
-
-        public string CertificatorIP { get; set; }
-        public ushort CertificatorPort { get; set; }
     }
 }

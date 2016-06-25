@@ -14,31 +14,112 @@
   <Plugin Name="Silkroad.Plugin.Farm" ServiceType="FarmManager" />
   <Plugin Name="Silkroad.Plugin.Agent" ServiceType="AgentServer" />
   <Plugin Name="Silkroad.Plugin.Shard" ServiceType="SR_ShardManager" />
-  <Plugin Name="Silkroad.Plugin.Game" ServiceType="SR_GameServer" />  
+  <Plugin Name="Silkroad.Plugin.Game" ServiceType="SR_GameServer" />
   <Plugin Name="Silkroad.Plugin.SMC" ServiceType="SMC" />
 
-  <Service Name="GlobalManager #CERT" Type="GlobalManager" IP ="192.168.178.15" Port="20000">
-    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
-    <Certificator IP="192.168.178.15" Port="15880" />
-    
-    <Redirect Desc="GatewayServer" NodeLink="1228" Port="20001"/>
-    <Redirect Desc="MachineManager" NodeLink="1229" Port="20002"/>    
-    <Redirect Desc="DownloadServer" NodeLink="1230" Port="20003"/>
+  <Service Name="GlobalManager #01" Type="GlobalManager" IP ="192.168.178.15" Port="20000">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="32000" />
+    <redirections>
+      <!-- connection to GlobalManager (self or service) -->
+      <Redirect CoordID="1227" MachineID="336" Port="20000" />
+    </redirections>
   </Service>
 
   <Service Name="MachineManager #01" Type="MachineManager" IP ="192.168.178.15" Port="20001">
-    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15880" />
+    <redirections>
+      <!-- connection to GlobalManager (self or service) -->
+      <Redirect CoordID="1229" MachineID="336" Port="20001" />
+    </redirections>
+  </Service>
+
+  <Service Name="SMC #01" Type="SMC" IP ="192.168.178.15" Port="30000">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
     <Certificator IP="192.168.178.15" Port="15880" />
   </Service>
 
   <Service Name="GatewayServer #01" Type="GatewayServer" IP ="192.168.178.15" Port="20002">
-    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
+    <Security Blowfish="true" CRC="false" Handshake="true" />
     <Certificator IP="192.168.178.15" Port="15880" />
+    <redirections>
+      <!-- connection to GlobalManager (self or service) -->
+      <Redirect CoordID="1228" MachineID="336" Port="20002" />
+    </redirections>
   </Service>
 
   <Service Name="DownloadServer #01" Type="DownloadServer" IP ="192.168.178.15" Port="20003">
-    <Security Blowfish="true" SecurityBytes="false" Handshake="true" />
+    <Security Blowfish="true" CRC="false" Handshake="true" />
     <Certificator IP="192.168.178.15" Port="15880" />
+    <redirections>
+      <!-- connection to GlobalManager (self or service) -->
+      <Redirect CoordID="1230" MachineID="336" Port="20003" />
+    </redirections>
+  </Service>
+
+  <Service Name="FarmManager #01" Type="FarmManager" IP ="192.168.178.15" Port="20004">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15880" />
+    <redirections>
+      <!-- connection to GlobalManager (self or service) -->
+      <Redirect CoordID="1234" MachineID="336" Port="20004" />
+    </redirections>
+  </Service>
+
+  <!-- AgentServers -->
+  <Service Name="AgentServer #CERT" Type="AgentServer" IP ="192.168.178.15" Port="20005">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15882" />
+    <redirections>
+      <!-- connection to FarmManager (self or service) -->
+      <Redirect CoordID="1237" MachineID="336" Port="20005" />
+
+      <!-- connection to SR_GameServer (Service) -->
+      <Redirect CoordID="1241" MachineID="336" Port="20006" />
+
+      <!-- connection to SR_ShardManager (Service) -->
+      <Redirect CoordID="1245" MachineID="336" Port="20007" />
+    </redirections>
+  </Service>
+
+  <Service Name="AgentServer #GAME" Type="AgentServer" IP ="192.168.178.15" Port="20006">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15885" />
+  </Service>
+
+  <Service Name="AgentServer #SHARD" Type="AgentServer" IP ="192.168.178.15" Port="20007">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15883" />
+  </Service>
+
+  <!-- SR_ShardManagers -->
+  <Service Name="SR_ShardManager #01" Type="SR_ShardManager" IP ="192.168.178.15" Port="20008">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15882" />
+    <redirections>
+      <!-- connection to FarmManager (self or service) -->
+      <Redirect CoordID="1235" MachineID="336" Port="20008" />
+    </redirections>
+  </Service>
+
+  <!-- SR_GameServers -->
+  <Service Name="SR_GameServer #01" Type="SR_GameServer" IP ="192.168.178.15" Port="20009">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15882" />
+    <redirections>
+
+      <!-- connection to FarmManager -->
+      <Redirect CoordID="1239" MachineID="336" Port="20009" />
+
+      <!-- connection to SR_ShardManager (Service) -->
+      <Redirect CoordID="1256" MachineID="336" Port="20010" />
+    </redirections>
+  </Service>
+
+  <Service Name="SR_GameServer #SHARD" Type="SR_GameServer" IP ="192.168.178.15" Port="20010">
+    <Security Blowfish="true" CRC="false" Handshake="true" />
+    <Certificator IP="192.168.178.15" Port="15883" />
   </Service>
 </filter>
 
@@ -62,4 +143,4 @@
 <!--CPRJ_ShardManager-->
 
 <!-- Default Security settings -->
-<!--<Security Blowfish="true" SecurityBytes="false" Handshake="true" />-->
+<!--<Security Blowfish="true" CRC="false" Handshake="true" />-->

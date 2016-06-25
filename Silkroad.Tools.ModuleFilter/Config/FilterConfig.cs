@@ -24,9 +24,8 @@ namespace Silkroad.Tools.ModuleProxy.Config
             {
                 xml.Load(fileName);
                 var root = xml["filter"];
-                foreach (XmlNode node in root.ChildNodes)
+                foreach (XmlNode node in root)
                 {
-                    //Skip comments
                     if (node.NodeType != XmlNodeType.Element)
                         continue;
 

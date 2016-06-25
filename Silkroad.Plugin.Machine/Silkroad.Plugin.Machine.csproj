@@ -4,26 +4,24 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{033B4F41-890B-4523-998C-A049C41149FE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{15D14B64-6B0C-4287-A5BA-5E38FDF04F47}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Silkroad.Tools.ModuleFilter</RootNamespace>
-    <AssemblyName>Silkroad.Tools.ModuleFilter</AssemblyName>
+    <RootNamespace>Silkroad.Plugin.Machine</RootNamespace>
+    <AssemblyName>Silkroad.Plugin.Machine</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,15 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\FilterConfig.cs" />
-    <Compile Include="PluginManager.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceCollection.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Silkroad.Framework.Network\Silkroad.Framework.Common.csproj">
@@ -65,23 +52,6 @@
       <Project>{b68f9d08-d251-4a1b-911d-6f19ca38dccd}</Project>
       <Name>Silkroad.Framework.Utility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Silkroad.Plugin.Gateway\Silkroad.Plugin.Gateway.csproj">
-      <Project>{6e338c76-6cee-41a0-8eb4-ce32608097b7}</Project>
-      <Name>Silkroad.Plugin.Gateway</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Silkroad.Plugin.Global\Silkroad.Plugin.Global.csproj">
-      <Project>{933dcc5b-c9a8-4493-9274-1f527a363a30}</Project>
-      <Name>Silkroad.Plugin.Global</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Silkroad.Plugin.Machine\Silkroad.Plugin.Machine.csproj">
-      <Project>{15d14b64-6b0c-4287-a5ba-5e38fdf04f47}</Project>
-      <Name>Silkroad.Plugin.Machine</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Config\Filter.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,6 +2,10 @@
 {
     public interface IPlugin
     {
-        void Register(Service service);
+        string Name { get; }
+
+        Service Service { get; }
+
+        void Register(string Name, Service service);
     }
 }

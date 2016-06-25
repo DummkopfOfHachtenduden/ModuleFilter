@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ServiceCertificator.cs" />
+    <Compile Include="Config\ServiceRedirect.cs" />
+    <Compile Include="Config\ServiceSecurity.cs" />
     <Compile Include="Objects\CertifiactionManager.cs" />
     <Compile Include="Objects\SecurityDesc\srSecurityDescriptionGroupAssign.cs" />
     <Compile Include="Objects\Certification\srGlobalOperation.cs" />
@@ -60,6 +63,7 @@
     <Compile Include="Network\PacketResult.cs" />
     <Compile Include="Network\PacketResultAction.cs" />
     <Compile Include="Network\PacketSource.cs" />
+    <Compile Include="PluginBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Blowfish.cs" />
     <Compile Include="Security\ByteArrayExtensions.cs" />

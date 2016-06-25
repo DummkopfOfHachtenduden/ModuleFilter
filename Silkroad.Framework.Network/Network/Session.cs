@@ -61,9 +61,9 @@ namespace Silkroad.Framework.Common
             _clientSecurity = new SecurityManager();
 
             //generate module security
-            _clientSecurity.GenerateSecurity(_service.Settings.Blowfish,
-                                             _service.Settings.SecurityBytes,
-                                             _service.Settings.Handshake);
+            _clientSecurity.GenerateSecurity(_service.Settings.Security.Blowfish,
+                                             _service.Settings.Security.CRC,
+                                             _service.Settings.Security.Handshake);
 
             _certificatorSecurity = new SecurityManager();
             _certificatorSecurity.ChangeIdentity(_service.Settings.Type.ToString(), 0);
@@ -76,7 +76,7 @@ namespace Silkroad.Framework.Common
         public bool Run()
         {
             _certificatorSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            _certificatorSocket.Connect(_service.Settings.CertificatorIP, _service.Settings.CertificatorPort);
+            _certificatorSocket.Connect(_service.Settings.Certificator.IP, _service.Settings.Certificator.Port);
 
             if (_certificatorSocket.Connected)
             {
@@ -180,8 +180,8 @@ namespace Silkroad.Framework.Common
                     }
                 }
 
-                //this.TransferToClient();
-                this.TransferTo(_clientSecurity, _clientSocket);
+                this.TransferToClient();
+                //this.TransferTo(_clientSecurity, _clientSocket);
                 this.BeginReceiveFromCertificator();
             }
             catch (Exception ex)
@@ -318,8 +318,8 @@ namespace Silkroad.Framework.Common
                     }
                 }
 
-                //this.TransferToCertificator();
-                this.TransferTo(_certificatorSecurity, _certificatorSocket);
+                this.TransferToCertificator();
+                //this.TransferTo(_certificatorSecurity, _certificatorSocket);
                 this.BeginReceiveFromClient();
             }
             catch (Exception ex)

@@ -3,15 +3,13 @@ using Silkroad.Framework.Common.Objects.SecurityDesc;
 using Silkroad.Framework.Common.Security;
 using Silkroad.Framework.Utility;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace Silkroad.Framework.Common.Objects
 {
     public class CertifiactionManager
     {
-        //TODO: THREAD SAFTY!!!
-
-        private Service _service;
+        public string RequestName { get; set; }
+        public string RequestIP { get; set; }
 
         public List<srServiceType> ServiceTypes { get; private set; }
         public List<srOperationType> OperationTypes { get; private set; }
@@ -27,10 +25,8 @@ namespace Silkroad.Framework.Common.Objects
         public List<SecurityDescription> SecurityDescriptions { get; private set; }
         public List<SecurityDescriptionGroupAssign> SecurityDescriptionGroupAssigns { get; private set; }
 
-        public CertifiactionManager(Service service)
+        public CertifiactionManager()
         {
-            _service = service;
-
             ServiceTypes = new List<srServiceType>();
             OperationTypes = new List<srOperationType>();
             GlobalServices = new List<srGlobalService>();
@@ -46,7 +42,19 @@ namespace Silkroad.Framework.Common.Objects
             SecurityDescriptionGroupAssigns = new List<SecurityDescriptionGroupAssign>();
         }
 
-        public void Read(Packet packet)
+        public void ReadReq(Packet packet)
+        {
+            this.RequestName = packet.ReadAscii();
+            this.RequestIP = packet.ReadAscii();
+        }
+
+        public void WriteReq(Packet packet)
+        {
+            packet.WriteAscii(this.RequestName);
+            packet.WriteAscii(this.RequestIP);
+        }
+
+        public void ReadAck(Packet packet)
         {
             var hasCertification = packet.ReadBool();
             if (hasCertification)
@@ -96,7 +104,7 @@ namespace Silkroad.Framework.Common.Objects
             }
         }
 
-        public void Write(Packet packet, bool writeCertification, bool writeSecurityDesc)
+        public void WriteAck(Packet packet, bool writeCertification, bool writeSecurityDesc)
         {
             packet.WriteBool(writeCertification);
             if (writeCertification)
@@ -130,163 +138,6 @@ namespace Silkroad.Framework.Common.Objects
                 packet.WriteStruct(structure);
             }
             packet.WriteByte(2);
-        }
-
-        public void ReadOld(Packet packet)
-        {
-            //bool -> read certification?
-            var unkByte0 = packet.ReadByte();
-
-            ServiceTypes.Clear();
-            OperationTypes.Clear();
-            GlobalServices.Clear();
-            GlobalOperations.Clear();
-            Unknown.Clear();
-            Shards.Clear();
-            NodeTypes.Clear();
-            NodeData.Clear();
-            NodeLinks.Clear();
-
-            //ServiceTypes
-            var unkByte1 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                ServiceTypes.Add(packet.ReadStruct<srServiceType>());
-            }
-
-            //OperationTypes
-            var unkByte2 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                OperationTypes.Add(packet.ReadStruct<srOperationType>());
-            }
-
-            //GlobalService
-            var unkByte3 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                GlobalServices.Add(packet.ReadStruct<srGlobalService>());
-            }
-
-            //GlobalOperation
-            var unkByte4 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                GlobalOperations.Add(packet.ReadStruct<srGlobalOperation>());
-            }
-
-            //Unknown
-            var unkByte5 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                Unknown.Add(packet.ReadStruct<srUnknown>());
-            }
-
-            //Shards
-            var unkByte6 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                Shards.Add(packet.ReadStruct<srShard>());
-            }
-
-            //NodeTypes
-            var unkByte7 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                var buffer = packet.ReadByteArray(Marshal.SizeOf(typeof(srNodeType)));
-                var nodeType = Unmanaged.BufferToStruct<srNodeType>(buffer);
-                NodeTypes.Add(nodeType);
-            }
-
-            //NodeData
-            var unkByte8 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                NodeData.Add(packet.ReadStruct<srNodeData>());
-            }
-
-            //NodeLinks
-            var unkByte9 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                NodeLinks.Add(packet.ReadStruct<srNodeLink>());
-            }
-
-            //bool read previliges?
-            var unkByte10 = packet.ReadByte();
-
-            SecurityDescriptionGroups.Clear();
-            SecurityDescriptions.Clear();
-            SecurityDescriptionGroupAssigns.Clear();
-
-            //securityDescriptionGroups
-            var unkByte11 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                SecurityDescriptionGroups.Add(packet.ReadStruct<SecurityDescriptionGroup>());
-            }
-
-            //securityDescriptions
-            var unkByte12 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                SecurityDescriptions.Add(packet.ReadStruct<SecurityDescription>());
-            }
-
-            //securityDescriptionGroupAssigns
-            var unkByte13 = packet.ReadByte();
-            while (true)
-            {
-                var flag = packet.ReadByte();
-                if (flag == 2)
-                    break;
-
-                SecurityDescriptionGroupAssigns.Add(packet.ReadStruct<SecurityDescriptionGroupAssign>());
-            }
         }
     }
 }

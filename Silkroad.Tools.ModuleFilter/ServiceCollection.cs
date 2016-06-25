@@ -5,6 +5,5 @@ namespace Silkroad.Tools.ModuleProxy
 {
     public class ServiceCollection : List<Service>
     {
-
     }
 }

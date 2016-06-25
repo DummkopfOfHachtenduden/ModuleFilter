@@ -2,6 +2,6 @@
 {
     public class SessionState
     {
-        public int ID { get; set; }        
+        public int ID { get; set; }
     }
 }

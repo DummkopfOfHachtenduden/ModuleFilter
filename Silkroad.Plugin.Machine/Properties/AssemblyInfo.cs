@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("Silkroad.Framework.Utility")]
+[assembly: AssemblyTitle("Silkroad.Plugin.Machine")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Silkroad.Framework.Utility")]
+[assembly: AssemblyProduct("Silkroad.Plugin.Machine")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("b68f9d08-d251-4a1b-911d-6f19ca38dccd")]
+[assembly: Guid("15d14b64-6b0c-4287-a5ba-5e38fdf04f47")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

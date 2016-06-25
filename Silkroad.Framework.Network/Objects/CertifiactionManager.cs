@@ -11,34 +11,34 @@ namespace Silkroad.Framework.Common.Objects
         public string RequestName { get; set; }
         public string RequestIP { get; set; }
 
-        public List<srServiceType> ServiceTypes { get; private set; }
-        public List<srOperationType> OperationTypes { get; private set; }
+        public Dictionary<byte, srServiceType> ServiceTypes { get; private set; }
+        public Dictionary<byte, srOperationType> OperationTypes { get; private set; }
         public List<srGlobalService> GlobalServices { get; private set; }
-        public List<srGlobalOperation> GlobalOperations { get; private set; }
+        public Dictionary<byte, srGlobalOperation> GlobalOperations { get; private set; }
         public List<srUnknown> Unknown { get; private set; }
-        public List<srShard> Shards { get; private set; }
-        public List<srNodeType> NodeTypes { get; private set; }
-        public List<srNodeData> NodeData { get; private set; }
-        public List<srNodeLink> NodeLinks { get; private set; }
+        public Dictionary<ushort, srShard> Shards { get; private set; }
+        public Dictionary<uint, srNodeType> NodeTypes { get; private set; }
+        public Dictionary<ushort, srNodeData> NodeData { get; private set; }
+        public Dictionary<uint, srNodeLink> NodeLinks { get; private set; }
 
-        public List<SecurityDescriptionGroup> SecurityDescriptionGroups { get; private set; }
-        public List<SecurityDescription> SecurityDescriptions { get; private set; }
+        public Dictionary<byte, SecurityDescriptionGroup> SecurityDescriptionGroups { get; private set; }
+        public Dictionary<uint, SecurityDescription> SecurityDescriptions { get; private set; }
         public List<SecurityDescriptionGroupAssign> SecurityDescriptionGroupAssigns { get; private set; }
 
         public CertifiactionManager()
         {
-            ServiceTypes = new List<srServiceType>();
-            OperationTypes = new List<srOperationType>();
+            ServiceTypes = new Dictionary<byte, srServiceType>();
+            OperationTypes = new Dictionary<byte, srOperationType>();
             GlobalServices = new List<srGlobalService>();
-            GlobalOperations = new List<srGlobalOperation>();
+            GlobalOperations = new Dictionary<byte, srGlobalOperation>();
             Unknown = new List<srUnknown>();
-            Shards = new List<srShard>();
-            NodeTypes = new List<srNodeType>();
-            NodeData = new List<srNodeData>();
-            NodeLinks = new List<srNodeLink>();
+            Shards = new Dictionary<ushort, srShard>();
+            NodeTypes = new Dictionary<uint, srNodeType>();
+            NodeData = new Dictionary<ushort, srNodeData>();
+            NodeLinks = new Dictionary<uint, srNodeLink>();
 
-            SecurityDescriptionGroups = new List<SecurityDescriptionGroup>();
-            SecurityDescriptions = new List<SecurityDescription>();
+            SecurityDescriptionGroups = new Dictionary<byte, SecurityDescriptionGroup>();
+            SecurityDescriptions = new Dictionary<uint, SecurityDescription>();
             SecurityDescriptionGroupAssigns = new List<SecurityDescriptionGroupAssign>();
         }
 
@@ -56,30 +56,56 @@ namespace Silkroad.Framework.Common.Objects
 
         public void ReadAck(Packet packet)
         {
-            var hasCertification = packet.ReadBool();
-            if (hasCertification)
+            var result = packet.ReadBool();
+            if (result)
             {
-                this.ReadList<srServiceType>(packet, ServiceTypes);
-                this.ReadList<srOperationType>(packet, OperationTypes);
+                this.ReadDict<byte, srServiceType>(packet, ServiceTypes);
+                this.ReadDict<byte, srOperationType>(packet, OperationTypes);
                 this.ReadList<srGlobalService>(packet, GlobalServices);
-                this.ReadList<srGlobalOperation>(packet, GlobalOperations);
+                this.ReadDict<byte, srGlobalOperation>(packet, GlobalOperations);
                 this.ReadList<srUnknown>(packet, Unknown);
-                this.ReadList<srShard>(packet, Shards);
-                this.ReadList<srNodeType>(packet, NodeTypes);
-                this.ReadList<srNodeData>(packet, NodeData);
-                this.ReadList<srNodeLink>(packet, NodeLinks);
-            }
+                this.ReadDict<ushort, srShard>(packet, Shards);
+                this.ReadDict<uint, srNodeType>(packet, NodeTypes);
+                this.ReadDict<ushort, srNodeData>(packet, NodeData);
+                this.ReadDict<uint, srNodeLink>(packet, NodeLinks);
 
-            var hasSecurityDescription = packet.ReadBool();
-            if (hasSecurityDescription)
-            {
-                this.ReadList<SecurityDescriptionGroup>(packet, SecurityDescriptionGroups);
-                this.ReadList<SecurityDescription>(packet, SecurityDescriptions);
-                this.ReadList<SecurityDescriptionGroupAssign>(packet, SecurityDescriptionGroupAssigns);
+                var hasSecurityDescription = packet.ReadBool();
+                if (hasSecurityDescription)
+                {
+                    this.ReadDict<byte, SecurityDescriptionGroup>(packet, SecurityDescriptionGroups);
+                    this.ReadDict<uint, SecurityDescription>(packet, SecurityDescriptions);
+                    this.ReadList<SecurityDescriptionGroupAssign>(packet, SecurityDescriptionGroupAssigns);
+                }
             }
         }
 
-        public void ReadList<T>(Packet packet, IList<T> list) where T : struct
+        public void ReadDict<TKey, TStruct>(Packet packet, IDictionary<TKey, TStruct> dict) where TStruct : Unmanaged.IUnmanagedStruct, IKeyStruct
+        {
+            dict.Clear();
+
+            var unkByte0 = packet.ReadByte();
+            while (true)
+            {
+                var entryFlag = packet.ReadByte();
+                if (entryFlag == 1)
+                {
+                    var structure = packet.ReadStruct<TStruct>();
+                    dict.Add(structure.Key, structure);
+                }
+                else if (entryFlag == 2)
+                {
+                    break;
+                }
+                else
+                {
+                    //TODO: Proper exception
+                    StaticLogger.Instance.Error($"{nameof(CertifiactionManager)}->{Caller.GetMemberName()}: entry missmatch!");
+                    break;
+                }
+            }
+        }
+
+        public void ReadList<TStruct>(Packet packet, IList<TStruct> list) where TStruct : Unmanaged.IUnmanagedStruct
         {
             list.Clear();
 
@@ -89,7 +115,7 @@ namespace Silkroad.Framework.Common.Objects
                 var entryFlag = packet.ReadByte();
                 if (entryFlag == 1)
                 {
-                    list.Add(packet.ReadStruct<T>());
+                    list.Add(packet.ReadStruct<TStruct>());
                 }
                 else if (entryFlag == 2)
                 {
@@ -109,30 +135,41 @@ namespace Silkroad.Framework.Common.Objects
             packet.WriteBool(writeCertification);
             if (writeCertification)
             {
-                this.WriteList<srServiceType>(packet, ServiceTypes);
-                this.WriteList<srOperationType>(packet, OperationTypes);
+                this.WriteDict<byte, srServiceType>(packet, ServiceTypes);
+                this.WriteDict<byte, srOperationType>(packet, OperationTypes);
                 this.WriteList<srGlobalService>(packet, GlobalServices);
-                this.WriteList<srGlobalOperation>(packet, GlobalOperations);
+                this.WriteDict<byte, srGlobalOperation>(packet, GlobalOperations);
                 this.WriteList<srUnknown>(packet, Unknown);
-                this.WriteList<srShard>(packet, Shards);
-                this.WriteList<srNodeType>(packet, NodeTypes);
-                this.WriteList<srNodeData>(packet, NodeData);
-                this.WriteList<srNodeLink>(packet, NodeLinks);
+                this.WriteDict<ushort, srShard>(packet, Shards);
+                this.WriteDict<uint, srNodeType>(packet, NodeTypes);
+                this.WriteDict<ushort, srNodeData>(packet, NodeData);
+                this.WriteDict<uint, srNodeLink>(packet, NodeLinks);
             }
 
             packet.WriteBool(writeSecurityDesc);
             if (writeSecurityDesc)
             {
-                this.WriteList<SecurityDescriptionGroup>(packet, SecurityDescriptionGroups);
-                this.WriteList<SecurityDescription>(packet, SecurityDescriptions);
+                this.WriteDict<byte, SecurityDescriptionGroup>(packet, SecurityDescriptionGroups);
+                this.WriteDict<uint, SecurityDescription>(packet, SecurityDescriptions);
                 this.WriteList<SecurityDescriptionGroupAssign>(packet, SecurityDescriptionGroupAssigns);
             }
         }
 
-        public void WriteList<T>(Packet packet, IList<T> list) where T : struct
+        public void WriteDict<TKey, TStruct>(Packet packet, IDictionary<TKey, TStruct> dict) where TStruct : Unmanaged.IUnmanagedStruct
         {
             packet.WriteByte(0); //unkByte1
-            foreach (T structure in list)
+            foreach (KeyValuePair<TKey, TStruct> kvp in dict)
+            {
+                packet.WriteByte(1);
+                packet.WriteStruct(kvp.Value);
+            }
+            packet.WriteByte(2);
+        }
+
+        public void WriteList<TStruct>(Packet packet, IList<TStruct> list) where TStruct : Unmanaged.IUnmanagedStruct
+        {
+            packet.WriteByte(0); //unkByte1
+            foreach (TStruct structure in list)
             {
                 packet.WriteByte(1);
                 packet.WriteStruct(structure);

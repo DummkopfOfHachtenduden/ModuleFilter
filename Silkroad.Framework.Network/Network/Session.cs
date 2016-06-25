@@ -1,7 +1,10 @@
-﻿using Silkroad.Framework.Common.Security;
+﻿//#define DEBUG_NET
+
+using Silkroad.Framework.Common.Security;
 using Silkroad.Framework.Utility;
 using System;
 using System.Net.Sockets;
+using System.Threading;
 
 namespace Silkroad.Framework.Common
 {
@@ -75,21 +78,34 @@ namespace Silkroad.Framework.Common
 
         public bool Run()
         {
-            _certificatorSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            _certificatorSocket.Connect(_service.Settings.Certificator.IP, _service.Settings.Certificator.Port);
-
-            if (_certificatorSocket.Connected)
+            while (!_destroyed)
             {
-                this.BeginReceiveFromCertificator();
-                this.BeginReceiveFromClient();
+                try
+                {
+                    _certificatorSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    _certificatorSocket.Connect(_service.Settings.Certificator.IP, _service.Settings.Certificator.Port);
+                    if (_certificatorSocket.Connected)
+                    {
+                        this.BeginReceiveFromCertificator();
+                        this.BeginReceiveFromClient();
 
-                return true;
+                        StaticLogger.Instance.Info($"{nameof(Session)}->{Caller.GetMemberName()}: server coord established: {_state.ID}({_service.Settings.Certificator.IP}:{_service.Settings.Certificator.Port})");
+
+                        return true;
+                    }
+                    else
+                    {
+                        this.Disconnect();
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    StaticLogger.Instance.Error(ex, $"{nameof(Session)}->{Caller.GetMemberName()}:");
+                }
+                Thread.Sleep(2000);
             }
-            else
-            {
-                this.Disconnect();
-                return false;
-            }
+            return false;
         }
 
         internal void Disconnect(bool suppressDestroy = false)
@@ -148,7 +164,7 @@ namespace Silkroad.Framework.Common
                     for (int i = 0; i < packets.Count; i++)
                     {
                         var packet = packets[i];
-#if TRACE
+#if DEBUG_NET
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[S->P][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
 #endif
@@ -203,7 +219,7 @@ namespace Silkroad.Framework.Common
                         if (_destroyed)
                             return;
 
-#if TRACE
+#if DEBUG_NET
                         var packet = kvp[i].Value;
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[P->S][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
@@ -286,7 +302,7 @@ namespace Silkroad.Framework.Common
                     for (int i = 0; i < packets.Count; i++)
                     {
                         var packet = packets[i];
-#if TRACE
+#if DEBUG_NET
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[C->P][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
 #endif
@@ -341,7 +357,7 @@ namespace Silkroad.Framework.Common
                         if (_destroyed)
                             return;
 
-#if TRACE
+#if DEBUG_NET
                         var packet = kvp[i].Value;
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[P->C][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine);
@@ -404,7 +420,7 @@ namespace Silkroad.Framework.Common
                         if (_destroyed)
                             return;
 
-#if TRACE
+#if DEBUG_NET
                         var packet = kvp[i].Value;
                         if (StaticLogger.Instance.IsTraceEnabled)
                             StaticLogger.Instance.Trace("[P->{7}][{0:X4}][{1} bytes]{2}{3}{4}{5}{6}", packet.Opcode, packet.Length, packet.Encrypted ? "[Encrypted]" : "", packet.Massive ? "[Massive]" : "", Environment.NewLine, packet.GetBytes().HexDump(), Environment.NewLine, manager.IdentityName);

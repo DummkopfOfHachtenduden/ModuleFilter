@@ -1,9 +1,10 @@
-﻿using System.Runtime.InteropServices;
+﻿using Silkroad.Framework.Utility;
+using System.Runtime.InteropServices;
 
 namespace Silkroad.Framework.Common.Objects.Certification
 {
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public struct srGlobalOperation
+    public struct srGlobalOperation : Unmanaged.IUnmanagedStruct, IKeyStruct
     {
         [MarshalAs(UnmanagedType.U1)]
         public byte ID;
@@ -16,5 +17,7 @@ namespace Silkroad.Framework.Common.Objects.Certification
 
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
         public string Query;
+
+        public dynamic Key { get { return ID; } }
     }
 }

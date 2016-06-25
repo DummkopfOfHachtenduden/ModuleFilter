@@ -25,6 +25,13 @@ namespace Silkroad.Tools.ModuleProxy
                 }
                 StaticLogger.SetInstance();
 
+                //StaticLogger.Instance.Trace("Trace");
+                //StaticLogger.Instance.Debug("Debug");
+                //StaticLogger.Instance.Info("Info");
+                //StaticLogger.Instance.Warn("Warn");
+                //StaticLogger.Instance.Error("Error");
+                //StaticLogger.Instance.Fatal("Fatal");
+
                 //Services
                 _serviceCollection = new ServiceCollection();
                 foreach (var serviceSettings in config.Services)
@@ -88,8 +95,8 @@ namespace Silkroad.Tools.ModuleProxy
             var copyright = asm.GetCustomAttribute<AssemblyCopyrightAttribute>()?.Copyright;
 
             //Display
-            Console.WindowWidth = 120;
-            Console.BufferHeight = 2500;
+            Console.WindowWidth = 140;
+            Console.BufferHeight = 5000;
             Console.Title = string.Format("{0} {1} ({2}) [{3}] {4}",
                 title,
                 version,

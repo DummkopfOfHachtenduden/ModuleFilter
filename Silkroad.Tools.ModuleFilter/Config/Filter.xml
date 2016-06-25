@@ -6,7 +6,6 @@
   <Logger Name="Silkroad.Plugin.Farm" LogLevel="Trace" />
   <!--TODO: Have plugins create their own logger-->
 
-  <Plugin Name="Silkroad.Plugin.Certification" ServiceType="Certification" />
   <Plugin Name="Silkroad.Plugin.Global" ServiceType="GlobalManager" />
   <Plugin Name="Silkroad.Plugin.Machine" ServiceType="MachineManager" />
   <Plugin Name="Silkroad.Plugin.Gateway" ServiceType="GatewayServer" />
@@ -85,11 +84,13 @@
 
   <Service Name="AgentServer #GAME" Type="AgentServer" IP ="192.168.178.15" Port="20006">
     <Security Blowfish="true" CRC="false" Handshake="true" />
+    <!-- Certificator is original SR_GameServer -->
     <Certificator IP="192.168.178.15" Port="15885" />
   </Service>
 
   <Service Name="AgentServer #SHARD" Type="AgentServer" IP ="192.168.178.15" Port="20007">
     <Security Blowfish="true" CRC="false" Handshake="true" />
+    <!-- Certificator is original SR_ShardManager -->
     <Certificator IP="192.168.178.15" Port="15883" />
   </Service>
 

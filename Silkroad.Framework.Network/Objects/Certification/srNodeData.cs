@@ -1,9 +1,10 @@
-﻿using System.Runtime.InteropServices;
+﻿using Silkroad.Framework.Utility;
+using System.Runtime.InteropServices;
 
 namespace Silkroad.Framework.Common.Objects.Certification
 {
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public struct srNodeData
+    public struct srNodeData : Unmanaged.IUnmanagedStruct, IKeyStruct
     {
         [MarshalAs(UnmanagedType.U2)]
         public ushort NodeID;
@@ -91,5 +92,7 @@ namespace Silkroad.Framework.Common.Objects.Certification
 
         [MarshalAs(UnmanagedType.U1)]
         public byte u20;
+
+        public dynamic Key { get { return NodeID; } }
     }
 }

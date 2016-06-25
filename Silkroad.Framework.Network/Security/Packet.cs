@@ -472,7 +472,7 @@ namespace Silkroad.Framework.Common.Security
             }
         }
 
-        public T ReadStruct<T>() where T : struct
+        public T ReadStruct<T>() where T : Unmanaged.IUnmanagedStruct
         {
             var buffer = this.ReadByteArray(Marshal.SizeOf(typeof(T)));
             return Unmanaged.BufferToStruct<T>(buffer);
@@ -1155,7 +1155,7 @@ namespace Silkroad.Framework.Common.Security
             }
         }
 
-        public void WriteStruct<T>(T value) where T : struct
+        public void WriteStruct<TStruct>(TStruct value) where TStruct : Unmanaged.IUnmanagedStruct
         {
             lock (_lock)
             {

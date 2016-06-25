@@ -1,5 +1,6 @@
 ﻿using Silkroad.Framework.Common.Objects;
 using Silkroad.Framework.Common.Security;
+using Silkroad.Framework.Utility;
 
 namespace Silkroad.Framework.Common
 {
@@ -33,6 +34,8 @@ namespace Silkroad.Framework.Common
 
             this.Service.PacketManager.AddModuleHandler(0x6003, CertificationReq);
             this.Service.PacketManager.AddCertificatorHandler(0xA003, CertificationAck);
+
+            //Add packet handlers used in all plugins here...
         }
 
         private PacketResult CertificationReq(Session arg1, Packet arg2)
@@ -50,14 +53,24 @@ namespace Silkroad.Framework.Common
 
             _certificationManager.ReadAck(arg2);
 
-            for (int i = 0; i < _certificationManager.NodeData.Count; i++)
+            foreach (var redirect in this.Service.Settings.Redirections)
             {
-                var data = _certificationManager.NodeData[i];
+                if (_certificationManager.NodeLinks.ContainsKey(redirect.CoordID))
+                {
+                    var link = _certificationManager.NodeLinks[redirect.CoordID];
 
-                //data.NodeType = 336;
-                data.Port = 20001;
+                    var parentNode = _certificationManager.NodeData[link.ParentNodeID];
 
-                _certificationManager.NodeData[i] = data;
+                    //SPOOF
+                    //parentNode.NodeType = redirect.MachineID;
+                    parentNode.Port = redirect.Port;
+
+                    _certificationManager.NodeData[link.ParentNodeID] = parentNode;
+                }
+                else
+                {
+                    StaticLogger.Logger[this.Name].Fatal($"Coord({redirect.CoordID}) not found. Redirect impossible, please check Filter.xml!");
+                }
             }
 
             var packet = new Packet(arg2.Opcode, arg2.Encrypted, arg2.Massive);

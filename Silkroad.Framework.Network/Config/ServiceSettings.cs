@@ -14,8 +14,8 @@ namespace Silkroad.Framework.Common.Config
         public ServiceSecurity Security { get; private set; }
         public ServiceCertificator Certificator { get; private set; }
 
-        private Dictionary<uint, ServiceRedirect> _redirections;
-        public IReadOnlyDictionary<uint, ServiceRedirect> Redirections { get { return _redirections; } }
+        private List<ServiceRedirect> _redirections;
+        public IReadOnlyList<ServiceRedirect> Redirections { get { return _redirections; } }
 
         public ServiceSettings(XmlNode node)
         {
@@ -27,7 +27,7 @@ namespace Silkroad.Framework.Common.Config
             this.Security = new ServiceSecurity(node["Security"]);
             this.Certificator = new ServiceCertificator(node["Certificator"]);
 
-            _redirections = new Dictionary<uint, ServiceRedirect>();
+            _redirections = new List<ServiceRedirect>();
             var redirectionNode = node["redirections"];
             if (redirectionNode == null)
                 return;
@@ -37,8 +37,7 @@ namespace Silkroad.Framework.Common.Config
                 if (redirectNode.NodeType != XmlNodeType.Element)
                     continue;
 
-                var redirect = new ServiceRedirect(redirectNode);
-                _redirections.Add(redirect.CoordID, redirect);
+                _redirections.Add(new ServiceRedirect(redirectNode));
             }
         }
     }

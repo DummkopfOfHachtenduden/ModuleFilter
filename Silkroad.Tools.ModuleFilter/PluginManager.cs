@@ -47,14 +47,13 @@ namespace Silkroad.Tools.ModuleProxy
                     };
                     var asm = _domain.Load(asmName);
                     var type = asm.GetType(kvp.Key + ".Plugin");
-                    var method = type.GetMethod("Register");
-                    var instance = Activator.CreateInstance(type) as IPlugin;
 
                     StaticLogger.Instance.Info("{0} ({1}) successfully loaded", file.Name, asm.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version ?? "0.0.0.0");
                     foreach (var service in _services)
                     {
                         if (service.Settings.Type == kvp.Value)
                         {
+                            var instance = Activator.CreateInstance(type) as IPlugin;
                             instance.Register(kvp.Key, service);
 
                             StaticLogger.Instance.Info($"{kvp.Key} [{kvp.Value}] registered for {service.Settings.Name}");

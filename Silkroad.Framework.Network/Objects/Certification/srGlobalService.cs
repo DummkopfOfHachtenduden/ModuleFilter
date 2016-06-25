@@ -1,9 +1,10 @@
-﻿using System.Runtime.InteropServices;
+﻿using Silkroad.Framework.Utility;
+using System.Runtime.InteropServices;
 
 namespace Silkroad.Framework.Common.Objects.Certification
 {
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public struct srGlobalService
+    public struct srGlobalService : Unmanaged.IUnmanagedStruct
     {
         [MarshalAs(UnmanagedType.U1)]
         public byte OperationType;

@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("Silkroad.Tools.ModuleFilter")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Silkroad.Tools.ModuleFilter")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
@@ -33,3 +33,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyInformationalVersion("Development")]

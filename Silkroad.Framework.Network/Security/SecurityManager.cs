@@ -893,7 +893,7 @@ namespace Silkroad.Framework.Common.Security
             m_accepted_handshake = false;
             m_started_handshake = false;
             m_identity_flag = 0;
-            m_identity_name = "SR_Client";
+            m_identity_name = "<None>";
 
             m_outgoing_packets = new List<Packet>();
             m_incoming_packets = new List<Packet>();

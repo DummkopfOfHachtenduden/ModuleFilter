@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export ModuleFilter.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="22.8858in" height="23.8031in"
+		viewBox="0 0 1647.78 1713.83" xml:space="preserve" color-interpolation-filters="sRGB" class="st17">
+	<v:documentProperties v:langID="1031" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st3 {fill:#5b9bd5;stroke:#c7c8c8;stroke-width:0.25}
+		.st4 {fill:#feffff;font-family:Calibri;font-size:0.833336em}
+		.st5 {font-size:1em}
+		.st6 {fill:#00b0f0;stroke:#c7c8c8;stroke-width:0.25}
+		.st7 {marker-end:url(#mrkr4-58);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st8 {fill:#5b9bd5;fill-opacity:1;stroke:#5b9bd5;stroke-opacity:1;stroke-width:0.28409090909091}
+		.st9 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st10 {fill:#4f87bb;font-family:Calibri;font-size:0.666664em}
+		.st11 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st12 {fill:#00b0f0;stroke:#c8c8c8;stroke-width:0.25}
+		.st13 {marker-end:url(#mrkr5-139);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st14 {marker-end:url(#mrkr5-161);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st15 {marker-end:url(#mrkr4-196);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st16 {marker-end:url(#mrkr4-204);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st17 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-58" class="st8" v:arrowType="4" v:arrowSize="2" v:setback="7.04" refX="-7.04" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.52,-3.52) "/>
+		</marker>
+		<g id="lend5">
+			<path d="M 2 1 L 0 0 L 1.98117 -0.993387 C 1.67173 -0.364514 1.67301 0.372642 1.98465 1.00043 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr5-139" class="st8" v:arrowType="5" v:arrowSize="2" v:setback="5.8" refX="-5.8" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(-3.52,-3.52) "/>
+		</marker>
+		<marker id="mrkr5-161" class="st8" v:arrowType="5" v:arrowSize="2" v:setback="6.16" refX="-6.16" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend5" transform="scale(-3.52,-3.52) "/>
+		</marker>
+		<marker id="mrkr4-196" class="st8" v:arrowType="4" v:arrowSize="2" v:setback="0" refX="-0" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.52,-3.52) "/>
+		</marker>
+		<marker id="mrkr4-204" class="st8" v:arrowType="4" v:arrowSize="2" v:setback="6.68" refX="-6.68" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.52,-3.52) "/>
+		</marker>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Verbinder" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(82.2756,-1424.69)">
+			<title>Rechteck</title>
+			<desc>1 – Certification Listening on: 32000</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="56.6929" cy="1671.31" width="113.39" height="85.0394"/>
+			<g id="shadow1-2" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="113.386" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="113.386" height="85.0394" class="st3"/>
+			<text x="24.42" y="1668.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1 – Certification<v:newlineChar/><tspan
+						x="17.04" dy="1.2em" class="st5">Listening on</tspan>: 32000</text>		</g>
+		<g id="shape2-8" v:mID="2" v:groupContext="shape" transform="translate(459.709,-1424.69)">
+			<title>Rechteck.2</title>
+			<desc>697 – GlobalManager Listening on: 15880 Trying to certify aga...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="79.8661" cy="1671.31" width="159.74" height="85.0394"/>
+			<g id="shadow2-9" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="159.732" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="159.732" height="85.0394" class="st3"/>
+			<text x="36.13" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>697 – GlobalManager<v:newlineChar/><tspan
+						x="40.21" dy="1.2em" class="st5">Listening on</tspan>: 15880<v:newlineChar/><tspan x="8.63" dy="1.2em"
+						class="st5">Trying to certify against our service </tspan><tspan x="26.86" dy="1.2em" class="st5">on port </tspan>20000 [server.cfg]</text>		</g>
+		<g id="shape3-17" v:mID="3" v:groupContext="shape" transform="translate(876.969,-1610.79)">
+			<title>Rechteck.3</title>
+			<desc>699 – MachineManager Listening for: ? Trying to certify again...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow3-18" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="34.82" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>699 – MachineManager<v:newlineChar/><tspan
+						x="53.18" dy="1.2em" class="st5">Listening for</tspan>: ?<v:newlineChar/><tspan x="5.49" dy="1.2em"
+						class="st5">Trying to certify against our service on </tspan><tspan x="36.51" dy="1.2em" class="st5">port </tspan>20001 [server.cfg]</text>		</g>
+		<g id="shape4-26" v:mID="4" v:groupContext="shape" transform="translate(876.969,-1487.06)">
+			<title>Rechteck.4</title>
+			<desc>698 – GatewayServer Listening for: SR_Client Trying to certif...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow4-27" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="39.81" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>698 – GatewayServer<v:newlineChar/><tspan
+						x="36.25" dy="1.2em" class="st5">Listening for</tspan>: SR_Client<v:newlineChar/><tspan x="5.49" dy="1.2em"
+						class="st5">Trying to certify against our service on </tspan><tspan x="37.65" dy="1.2em" class="st5">port </tspan>20002[server.cfg]</text>		</g>
+		<g id="shape5-35" v:mID="5" v:groupContext="shape" transform="translate(876.969,-1363.32)">
+			<title>Rechteck.5</title>
+			<desc>700 – DownloadServer Listening for: SR_Client Trying to certi...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow5-36" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="37.03" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>700 – DownloadServer<v:newlineChar/><tspan
+						x="36.25" dy="1.2em" class="st5">Listening for</tspan>: SR_Client<v:newlineChar/><tspan x="5.49" dy="1.2em"
+						class="st5">Trying to certify against our service on </tspan><tspan x="36.51" dy="1.2em" class="st5">port </tspan>20003 [server.cfg]</text>		</g>
+		<g id="shape18-44" v:mID="18" v:groupContext="shape" transform="translate(242.929,-1424.69)">
+			<title>Rechteck, abgeschnittene Ecken</title>
+			<desc>Service: GlobalManager #01 Listening on: 20000 Connecting to ...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow18-45" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="43.05" dy="1.2em" class="st5">GlobalManager </tspan>#01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20000<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>32000</text>		</g>
+		<g id="shape15-53" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(242.929,-1460.13)">
+			<title>Dynamischer Verbinder</title>
+			<desc>1227</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-23.6339" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-40.23 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-31.7434" y="1701.94" width="16.2191" height="9.59985" class="st9"/>
+			<text x="-31.74" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1227</text>		</g>
+		<g id="shape16-61" v:mID="16" v:groupContext="shape" v:layerMember="0" transform="translate(459.709,-1460.13)">
+			<title>Dynamischer Verbinder.16</title>
+			<desc>1227</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-25.2638" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-43.49 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-33.3733" y="1701.94" width="16.2191" height="9.59985" class="st11"/>
+			<text x="-33.37" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1227</text>		</g>
+		<g id="shape19-68" v:mID="19" v:groupContext="shape" transform="translate(663.449,-1610.79)">
+			<title>Rechteck, abgeschnittene Ecken.19</title>
+			<desc>Service: MachineManager #01 Listening on: 20001 Connecting to...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow19-69" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="38.49" dy="1.2em" class="st5">MachineManager </tspan>#01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20001<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15880</text>		</g>
+		<g id="shape20-77" v:mID="20" v:groupContext="shape" transform="translate(663.449,-1487.06)">
+			<title>Rechteck, abgeschnittene Ecken.20</title>
+			<desc>Service: GatewayServer #01 Listening on: 20002 Connecting to ...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow20-78" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="43.48" dy="1.2em" class="st5">GatewayServer </tspan>#01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20002<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15880</text>		</g>
+		<g id="shape21-86" v:mID="21" v:groupContext="shape" transform="translate(663.449,-1363.32)">
+			<title>Rechteck, abgeschnittene Ecken.21</title>
+			<desc>Service: DownloadServer #01 Listening on: 20003 Connecting to...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow21-87" v:groupContext="shadow" v:shadowOffsetX="0.3456" v:shadowOffsetY="-1.9728" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.3456,1.9728)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st12"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="40.7" dy="1.2em" class="st5">DownloadServer </tspan>#01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20003<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15880</text>		</g>
+		<g id="shape22-95" v:mID="22" v:groupContext="shape" transform="translate(456.449,-1107.07)">
+			<title>Rechteck.22</title>
+			<desc>704 – FarmManager Listening on: 15882 Trying to certify again...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow22-96" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="42.07" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>704 – FarmManager<v:newlineChar/><tspan
+						x="43.47" dy="1.2em" class="st5">Listening on</tspan>: 15882<v:newlineChar/><tspan x="5.49" dy="1.2em"
+						class="st5">Trying to certify against our service on </tspan><tspan x="36.51" dy="1.2em" class="st5">port </tspan>20004 [server.cfg]</text>		</g>
+		<g id="shape23-104" v:mID="23" v:groupContext="shape" transform="translate(456.449,-1260.28)">
+			<title>Rechteck, abgeschnittene Ecken.23</title>
+			<desc>Service: FarmManager #01 Listening on: 20004 Connecting to ce...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow23-105" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="45.73" dy="1.2em" class="st5">FarmManager </tspan>#01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20004<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15880</text>		</g>
+		<g id="shape24-113" v:mID="24" v:groupContext="shape" v:layerMember="0" transform="translate(876.969,-1646.22)">
+			<title>Dynamischer Verbinder.24</title>
+			<desc>1229</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-23.6339" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-40.23 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-31.7434" y="1701.94" width="16.2191" height="9.59985" class="st9"/>
+			<text x="-31.74" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1229</text>		</g>
+		<g id="shape25-120" v:mID="25" v:groupContext="shape" v:layerMember="0" transform="translate(876.969,-1522.49)">
+			<title>Dynamischer Verbinder.25</title>
+			<desc>1228</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-23.6339" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-40.23 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-31.7434" y="1701.94" width="16.2191" height="9.59985" class="st9"/>
+			<text x="-31.74" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1228</text>		</g>
+		<g id="shape26-127" v:mID="26" v:groupContext="shape" v:layerMember="0" transform="translate(876.969,-1398.76)">
+			<title>Dynamischer Verbinder.26</title>
+			<desc>1230</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-23.6339" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-40.23 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-31.7434" y="1701.94" width="16.2191" height="9.59985" class="st9"/>
+			<text x="-31.74" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1230</text>		</g>
+		<g id="shape28-134" v:mID="28" v:groupContext="shape" v:layerMember="0" transform="translate(663.449,-1653.31)">
+			<title>Dynamischer Verbinder.28</title>
+			<desc>1229</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-104.771" cy="1746.22" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-30.97 1713.83 -76.47 1713.83 -99.68 1739.65 C-122.53 1765.07 -123.8 1815.48 -123.87 1851.24 L-123.87
+						 1851.6" class="st13"/>
+			<rect v:rectContext="textBkgnd" x="-112.88" y="1741.42" width="16.2191" height="9.59985" class="st11"/>
+			<text x="-112.88" y="1748.62" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1229</text>		</g>
+		<g id="shape29-142" v:mID="29" v:groupContext="shape" v:layerMember="0" transform="translate(663.449,-1529.57)">
+			<title>Dynamischer Verbinder.29</title>
+			<desc>1228</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-10.9624" cy="1753.73" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-10.63 1713.83 -10.63 1728.55 -10.63 1743.27 C-10.63 1758.65 -10.63 1774.03 -37.85 1775.98 L-38.21
+						 1775.99" class="st13"/>
+			<rect v:rectContext="textBkgnd" x="-19.0719" y="1748.93" width="16.2191" height="9.59985" class="st11"/>
+			<text x="-19.07" y="1756.13" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1228</text>		</g>
+		<g id="shape30-149" v:mID="30" v:groupContext="shape" v:layerMember="0" transform="translate(663.449,-1405.84)">
+			<title>Dynamischer Verbinder.30</title>
+			<desc>1230</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-10.9822" cy="1674.4" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-10.63 1713.83 -10.63 1699.36 -10.63 1684.9 C-10.63 1669.74 -10.63 1654.59 -37.85 1652.66 L-38.21
+						 1652.65" class="st13"/>
+			<rect v:rectContext="textBkgnd" x="-19.0917" y="1669.6" width="16.2191" height="9.59985" class="st11"/>
+			<text x="-19.09" y="1676.8" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1230</text>		</g>
+		<g id="shape31-156" v:mID="31" v:groupContext="shape" v:layerMember="0" transform="translate(532.488,-1345.32)">
+			<title>Dynamischer Verbinder.31</title>
+			<desc>1234P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="7.08661" cy="1674.14" width="40" height="17.6036"/>
+			<path d="M7.09 1713.83 C7.09 1695.87 7.09 1661.66 7.09 1640.62" class="st14"/>
+			<rect v:rectContext="textBkgnd" x="-3.08941" y="1669.34" width="20.3519" height="9.59985" class="st11"/>
+			<text x="-3.09" y="1676.54" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1234P</text>		</g>
+		<g id="shape40-164" v:mID="40" v:groupContext="shape" transform="translate(237.118,-863.433)">
+			<title>Rechteck, abgeschnittene Ecken.40</title>
+			<desc>Service: SR_GameServer #01 Listening on: 20009 Connecting to ...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow40-165" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="41.89" dy="1.2em" class="st5">SR</tspan>_GameServer #01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20009<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15882</text>		</g>
+		<g id="shape41-173" v:mID="41" v:groupContext="shape" transform="translate(675.354,-863.433)">
+			<title>Rechteck, abgeschnittene Ecken.41</title>
+			<desc>Service: SR_ShardManager #01 Listening on: 20008 Connecting t...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow41-174" v:groupContext="shadow" v:shadowOffsetX="0.3456" v:shadowOffsetY="-1.9728" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.3456,1.9728)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st12"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="36.97" dy="1.2em" class="st5">SR</tspan>_ShardManager #01<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20008<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15882</text>		</g>
+		<g id="shape42-182" v:mID="42" v:groupContext="shape" transform="translate(456.236,-863.433)">
+			<title>Rechteck, abgeschnittene Ecken.42</title>
+			<desc>Service: AgentServer #CERT Listening on: 20005 Connecting to ...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow42-183" v:groupContext="shadow" v:shadowOffsetX="0.3456" v:shadowOffsetY="-1.9728" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.3456,1.9728)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st12"/>
+			<text x="67.25" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="44.19" dy="1.2em" class="st5">AgentServer </tspan>#CERT<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20005<v:newlineChar/><tspan x="9.86" dy="1.2em" class="st5">Connecting to  certifiactor on </tspan>15882</text>		</g>
+		<g id="shape43-191" v:mID="43" v:groupContext="shape" v:layerMember="0" transform="translate(758.48,-948.472)">
+			<title>Dynamischer Verbinder.43</title>
+			<desc>1235</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-159.996" cy="1696.68" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-0 1703.2 -49.62 1703.2 -99.25 1703.2 C-159.08 1703.2 -218.91 1703.2 -218.91 1555.23" class="st15"/>
+			<rect v:rectContext="textBkgnd" x="-168.105" y="1691.88" width="16.2191" height="9.59985" class="st11"/>
+			<text x="-168.11" y="1699.08" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1235</text>		</g>
+		<g id="shape44-199" v:mID="44" v:groupContext="shape" v:layerMember="0" transform="translate(532.382,-948.472)">
+			<title>Dynamischer Verbinder.44</title>
+			<desc>1237P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="5.98852" cy="1662.67" width="40" height="17.6036"/>
+			<path d="M6.98 1713.83 C6.98 1708.51 6.98 1707.88 6.98 1707.33 C6.99 1703.2 7.06 1703.2 7.11 1694.19 C7.19 1677.92 7.19
+						 1632.27 7.19 1562.27 L7.19 1561.91" class="st16"/>
+			<rect v:rectContext="textBkgnd" x="-4.18751" y="1657.87" width="20.3519" height="9.59985" class="st11"/>
+			<text x="-4.19" y="1665.07" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1237P</text>		</g>
+		<g id="shape45-207" v:mID="45" v:groupContext="shape" v:layerMember="0" transform="translate(320.244,-948.472)">
+			<title>Dynamischer Verbinder.45</title>
+			<desc>1239</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="160.199" cy="1696.72" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-0 1703.2 49.74 1703.2 99.48 1703.2 C159.4 1703.2 219.33 1703.2 219.33 1555.23" class="st15"/>
+			<rect v:rectContext="textBkgnd" x="152.089" y="1691.92" width="16.2191" height="9.59985" class="st11"/>
+			<text x="152.09" y="1699.12" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1239</text>		</g>
+		<g id="shape49-214" v:mID="49" v:groupContext="shape" transform="translate(456.236,-735.874)">
+			<title>Rechteck.49</title>
+			<desc>707 – AgentServer Listening for: SR_Client Trying to certify ...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow49-215" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="45.72" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>707 – AgentServer<v:newlineChar/><tspan
+						x="36.25" dy="1.2em" class="st5">Listening for</tspan>: SR_Client<v:newlineChar/><tspan x="5.49" dy="1.2em"
+						class="st5">Trying to certify against our service on </tspan><tspan x="36.51" dy="1.2em" class="st5">port </tspan>20005 [server.cfg]</text>		</g>
+		<g id="shape50-223" v:mID="50" v:groupContext="shape" transform="translate(675.354,-735.874)">
+			<title>Rechteck, abgeschnittene Ecken.50</title>
+			<desc>Service: AgentServer #SHARD Listening on: 20007 Connecting to...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow50-224" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1650.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="40.35" dy="1.2em" class="st5">AgentServer </tspan>#SHARD<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20007<v:newlineChar/><tspan x="9.73" dy="1.2em" class="st5">Connecting to SR</tspan>_ShardManager on <tspan
+						x="60.64" dy="1.2em" class="st5">port </tspan>15883</text>		</g>
+		<g id="shape51-233" v:mID="51" v:groupContext="shape" transform="translate(237.118,-735.874)">
+			<title>Rechteck, abgeschnittene Ecken.51</title>
+			<desc>Service: AgentServer #GAME Listening on: 20006 Connecting to ...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow51-234" v:groupContext="shadow" v:shadowOffsetX="0.3456" v:shadowOffsetY="-1.9728" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.3456,1.9728)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st12"/>
+			<text x="67.25" y="1650.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="41.69" dy="1.2em" class="st5">AgentServer </tspan>#GAME<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20006<v:newlineChar/><tspan x="14.65" dy="1.2em" class="st5">Connecting to SR</tspan>_GameServer on<v:newlineChar/><tspan
+						x="60.64" dy="1.2em" class="st5">port </tspan>15885</text>		</g>
+		<g id="shape54-243" v:mID="54" v:groupContext="shape" v:layerMember="0" transform="translate(532.276,-820.913)">
+			<title>Dynamischer Verbinder.54</title>
+			<desc>1237P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="7.08661" cy="1692.57" width="40" height="17.6036"/>
+			<path d="M7.09 1713.83 L7.09 1678.35" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-3.08941" y="1687.77" width="20.3519" height="9.59985" class="st11"/>
+			<text x="-3.09" y="1694.97" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1237P</text>		</g>
+		<g id="shape55-250" v:mID="55" v:groupContext="shape" v:layerMember="0" transform="translate(622.488,-771.307)">
+			<title>Dynamischer Verbinder.55</title>
+			<desc>1245P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="26.4331" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L45.83 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="16.257" y="1701.94" width="20.3519" height="9.59985" class="st11"/>
+			<text x="16.26" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1245P</text>		</g>
+		<g id="shape56-257" v:mID="56" v:groupContext="shape" v:layerMember="0" transform="translate(456.236,-771.307)">
+			<title>Dynamischer Verbinder.56</title>
+			<desc>1241P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-26.4331" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-45.83 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-36.6091" y="1701.94" width="20.3519" height="9.59985" class="st11"/>
+			<text x="-36.61" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1241P</text>		</g>
+		<g id="shape57-264" v:mID="57" v:groupContext="shape" transform="translate(894.472,-863.433)">
+			<title>Rechteck.57</title>
+			<desc>705 – SR_ShardManager Listening on: 15883 Trying to certify a...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow57-265" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="33.3" y="1656.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>705 – SR_ShardManager<v:newlineChar/><v:paragraph
+						v:horizAlign="1"/><tspan x="43.47" dy="1.2em" class="st5">Listening on</tspan>: 15883<v:newlineChar/><v:paragraph
+						v:horizAlign="1"/><tspan x="5.49" dy="1.2em" class="st5">Trying to certify against our service on </tspan><tspan
+						x="36.51" dy="1.2em" class="st5">port </tspan>20008 [server.cfg]</text>		</g>
+		<g id="shape59-273" v:mID="59" v:groupContext="shape" v:layerMember="0" transform="translate(894.472,-898.866)">
+			<title>Dynamischer Verbinder.59</title>
+			<desc>1235</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-26.4331" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L-45.83 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-34.5426" y="1701.94" width="16.2191" height="9.59985" class="st11"/>
+			<text x="-34.54" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1235</text>		</g>
+		<g id="shape61-280" v:mID="61" v:groupContext="shape" v:layerMember="0" transform="translate(841.606,-778.394)">
+			<title>Dynamischer Verbinder.61</title>
+			<desc>1245P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="94.3217" cy="1704.92" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C34 1713.83 88.13 1713.83 113.53 1695.86 C133.61 1681.66 135.74 1656.25 135.97 1635.83 L135.97 1635.47"
+					class="st16"/>
+			<rect v:rectContext="textBkgnd" x="84.1457" y="1700.12" width="20.3519" height="9.59985" class="st11"/>
+			<text x="84.15" y="1707.32" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1245P</text>		</g>
+		<g id="shape63-287" v:mID="63" v:groupContext="shape" v:layerMember="0" transform="translate(804.827,-643.748)">
+			<title>Dynamischer Verbinder.63</title>
+		</g>
+		<g id="shape64-288" v:mID="64" v:groupContext="shape" transform="translate(18,-863.433)">
+			<title>Rechteck.64</title>
+			<desc>713 – SR_GameServer Listening on: 15885 Trying to certify aga...</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow64-289" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st2"/>
+			</g>
+			<rect x="0" y="1628.79" width="166.252" height="85.0394" class="st3"/>
+			<text x="38.22" y="1644.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>713 – SR_GameServer<v:newlineChar/><tspan
+						x="43.47" dy="1.2em" class="st5">Listening on</tspan>: 15885<v:newlineChar/><tspan x="5.49" dy="1.2em"
+						class="st5">Trying to certify against our service on </tspan><tspan x="36.51" dy="1.2em" class="st5">port </tspan>20009 [server.cfg]<v:newlineChar/><v:paragraph
+						v:horizAlign="1"/><tspan x="9.73" dy="1.2em" class="st5">Connecting to SR</tspan>_ShardManager on <tspan
+						x="60.64" dy="1.2em" class="st5">port </tspan>20010</text>		</g>
+		<g id="shape67-299" v:mID="67" v:groupContext="shape" v:layerMember="0" transform="translate(184.252,-898.866)">
+			<title>Dynamischer Verbinder.67</title>
+			<desc>1239</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="26.4331" cy="1706.74" width="40" height="17.6036"/>
+			<path d="M0 1706.74 L45.83 1706.74" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="18.3236" y="1701.94" width="16.2191" height="9.59985" class="st11"/>
+			<text x="18.32" y="1709.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1239</text>		</g>
+		<g id="shape69-306" v:mID="69" v:groupContext="shape" v:layerMember="0" transform="translate(237.118,-778.394)">
+			<title>Dynamischer Verbinder.69</title>
+			<desc>1241P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="-94.3217" cy="1704.92" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-34 1713.83 -88.13 1713.83 -113.53 1695.86 C-133.61 1681.66 -135.74 1656.25 -135.97 1635.83 L-135.97
+						 1635.47" class="st16"/>
+			<rect v:rectContext="textBkgnd" x="-104.498" y="1700.12" width="20.3519" height="9.59985" class="st11"/>
+			<text x="-104.5" y="1707.32" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1241P</text>		</g>
+		<g id="shape71-313" v:mID="71" v:groupContext="shape" transform="translate(456.236,-608.315)">
+			<title>Rechteck, abgeschnittene Ecken.71</title>
+			<desc>Service: SR_GameServer #SHARD Listening on: 20010</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.23090551181102):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="83.126" cy="1671.31" width="166.26" height="85.0394"/>
+			<g id="shadow71-314" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41
+							 L0 1697.2 L16.63 1713.83 Z" class="st2"/>
+			</g>
+			<path d="M16.63 1713.83 L149.63 1713.83 L166.25 1697.2 L166.25 1645.41 L149.63 1628.79 L16.63 1628.79 L0 1645.41 L0 1697.2
+						 L16.63 1713.83 Z" class="st6"/>
+			<text x="67.25" y="1662.31" class="st4" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>Service:<v:newlineChar/><tspan
+						x="32.86" dy="1.2em" class="st5">SR</tspan>_GameServer #SHARD<v:newlineChar/><tspan x="43.47" dy="1.2em"
+						class="st5">Listening on</tspan>: 20010</text>		</g>
+		<g id="shape72-321" v:mID="72" v:groupContext="shape" v:layerMember="0" transform="translate(18,-905.953)">
+			<title>Dynamischer Verbinder.72</title>
+			<desc>1256</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="126.848" cy="1944.7" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C-10.63 1713.83 -10.63 1756.04 -10.63 1798.25 C-10.63 1883.6 -10.63 1968.94 438.24 1968.94"
+					class="st15"/>
+			<rect v:rectContext="textBkgnd" x="118.739" y="1939.9" width="16.2191" height="9.59985" class="st11"/>
+			<text x="118.74" y="1947.1" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1256</text>		</g>
+		<g id="shape73-328" v:mID="73" v:groupContext="shape" v:layerMember="0" transform="translate(622.488,-650.835)">
+			<title>Dynamischer Verbinder.73</title>
+			<desc>1256</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="311.388" cy="1689.58" width="40" height="17.6036"/>
+			<path d="M0 1713.83 C448.87 1713.83 448.87 1628.48 448.87 1543.13 C448.87 1509.38 448.87 1475.63 443.43 1463.46 L443.17
+						 1463.21" class="st16"/>
+			<rect v:rectContext="textBkgnd" x="303.278" y="1684.78" width="16.2191" height="9.59985" class="st11"/>
+			<text x="303.28" y="1691.98" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1256</text>		</g>
+		<g id="shape76-335" v:mID="76" v:groupContext="shape" v:layerMember="0" transform="translate(532.488,-1192.11)">
+			<title>Dynamischer Verbinder.76</title>
+			<desc>1234P</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="7.08661" cy="1679.74" width="40" height="17.6036"/>
+			<path d="M7.09 1713.83 C7.09 1698.89 7.09 1670.87 7.09 1652.69" class="st7"/>
+			<rect v:rectContext="textBkgnd" x="-3.08941" y="1674.94" width="20.3519" height="9.59985" class="st11"/>
+			<text x="-3.09" y="1682.14" class="st10" v:langID="1031"><v:paragraph v:horizAlign="1"/><v:tabList/>1234P</text>		</g>
+	</g>
+</svg>

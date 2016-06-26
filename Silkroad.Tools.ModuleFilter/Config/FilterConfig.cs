@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 
-namespace Silkroad.Tools.ModuleProxy.Config
+namespace Silkroad.Tools.ModuleFilter.Config
 {
     public class FilterConfig
     {

@@ -2,76 +2,83 @@
 using Silkroad.Framework.Common.Security;
 using Silkroad.Framework.Utility;
 
-namespace Silkroad.Framework.Common
+namespace Silkroad.Framework.Common.Plugin
 {
     public class PluginBase : IPlugin
     {
-        #region Fields
-
-        private CertifiactionManager _certificationManager;
-
-        #endregion Fields
-
         #region Properties
 
-        public string Name { get; private set; }
+        public int Index { get; protected set; }
 
-        public Service Service { get; private set; }
+        public string Name { get; protected set; }
+
+        public Service Service { get; protected set; }
+
+        public CertifiactionManager CertificationManager { get; protected set; }
+
+        public IPluginControl Control { get; protected set; }
 
         #endregion Properties
 
-        public PluginBase()
-        {
-            _certificationManager = new CertifiactionManager();
-        }
-
-        #region Methods
+        #region Methods (public virtual)
 
         public virtual void Register(string name, Service service)
         {
             this.Name = name;
             this.Service = service;
 
+            this.CertificationManager = new CertifiactionManager();
             this.Service.PacketManager.AddModuleHandler(0x6003, CertificationReq);
             this.Service.PacketManager.AddCertificatorHandler(0xA003, CertificationAck);
-
             //Add packet handlers used in all plugins here...
+
+            //0x6008,
+            //0xA008,
         }
 
-        private PacketResult CertificationReq(Session arg1, Packet arg2)
+        public virtual void InitializeUI()
+        {
+            this.Control = new PluginControl(this);
+        }
+
+        #endregion Methods (public virtual)
+
+        #region Methods (protected virtual)
+
+        protected virtual PacketResult CertificationReq(Session arg1, Packet arg2)
         {
             var result = new PacketResult(PacketResultAction.Replace);
             var response = new Packet(arg2.Opcode, arg2.Encrypted, arg2.Massive);
 
-            _certificationManager.ReadReq(arg2);
+            CertificationManager.ReadReq(arg2);
 
             //_certificationManager.RequestIP = "192.168.178.10";
 
-            _certificationManager.WriteReq(response);
+            CertificationManager.WriteReq(response);
 
             result.Add(response);
             return result;
         }
 
-        private PacketResult CertificationAck(Session arg1, Packet arg2)
+        protected virtual PacketResult CertificationAck(Session arg1, Packet arg2)
         {
             var result = new PacketResult(PacketResultAction.Replace);
 
-            _certificationManager.ReadAck(arg2);
+            CertificationManager.ReadAck(arg2);
 
             foreach (var redirect in this.Service.Settings.Redirections)
             {
-                if (_certificationManager.NodeLinks.ContainsKey(redirect.CoordID))
+                if (CertificationManager.NodeLinks.ContainsKey(redirect.CoordID))
                 {
-                    var link = _certificationManager.NodeLinks[redirect.CoordID];
+                    var link = CertificationManager.NodeLinks[redirect.CoordID];
 
-                    var parentNode = _certificationManager.NodeData[link.ParentNodeID];
+                    var parentNode = CertificationManager.NodeData[link.ParentNodeID];
 
                     //SPOOF
                     //parentNode.NodeType = redirect.MachineID;
                     parentNode.Port = redirect.Port;
 
-                    _certificationManager.NodeData[link.ParentNodeID] = parentNode;
+                    CertificationManager.NodeData[link.ParentNodeID] = parentNode;
                 }
                 else
                 {
@@ -80,13 +87,13 @@ namespace Silkroad.Framework.Common
             }
 
             var packet = new Packet(arg2.Opcode, arg2.Encrypted, arg2.Massive);
-            _certificationManager.WriteAck(packet, true, true);
+            CertificationManager.WriteAck(packet, true, true);
 
             result.Add(packet);
 
             return result;
         }
 
-        #endregion Methods
+        #endregion Methods (protected virtual)
     }
 }

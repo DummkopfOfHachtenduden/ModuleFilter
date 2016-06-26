@@ -30,12 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Be.Windows.Forms.HexBox.1.6.1\lib\net40\Be.Windows.Forms.HexBox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,12 +65,12 @@
     <Compile Include="Objects\Certification\srServiceType.cs" />
     <Compile Include="Objects\Certification\srShard.cs" />
     <Compile Include="Objects\Certification\srUnknown.cs" />
-    <Compile Include="IPlugin.cs" />
+    <Compile Include="Plugin\IPlugin.cs" />
     <Compile Include="Network\PacketManager.cs" />
     <Compile Include="Network\PacketResult.cs" />
     <Compile Include="Network\PacketResultAction.cs" />
     <Compile Include="Network\PacketSource.cs" />
-    <Compile Include="PluginBase.cs" />
+    <Compile Include="Plugin\PluginBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Blowfish.cs" />
     <Compile Include="Security\ByteArrayExtensions.cs" />
@@ -86,6 +92,13 @@
     <Compile Include="Network\SessionPool.cs" />
     <Compile Include="Network\SessionPoolWorkItem.cs" />
     <Compile Include="Network\SessionState.cs" />
+    <Compile Include="Plugin\IPluginControl.cs" />
+    <Compile Include="Plugin\PluginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Plugin\PluginControl.Designer.cs">
+      <DependentUpon>PluginControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Silkroad.Framework.Utility\Silkroad.Framework.Utility.csproj">
@@ -98,7 +111,11 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Plugin\PluginControl.resx">
+      <DependentUpon>PluginControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

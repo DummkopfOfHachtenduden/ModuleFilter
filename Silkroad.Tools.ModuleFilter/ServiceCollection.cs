@@ -1,7 +1,7 @@
 ﻿using Silkroad.Framework.Common;
 using System.Collections.Generic;
 
-namespace Silkroad.Tools.ModuleProxy
+namespace Silkroad.Tools.ModuleFilter
 {
     public class ServiceCollection : List<Service>
     {

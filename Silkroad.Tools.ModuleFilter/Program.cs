@@ -1,10 +1,10 @@
 ﻿using Silkroad.Framework.Common;
 using Silkroad.Framework.Utility;
-using Silkroad.Tools.ModuleProxy.Config;
+using Silkroad.Tools.ModuleFilter.Config;
 using System;
 using System.Reflection;
 
-namespace Silkroad.Tools.ModuleProxy
+namespace Silkroad.Tools.ModuleFilter
 {
     internal class Program
     {

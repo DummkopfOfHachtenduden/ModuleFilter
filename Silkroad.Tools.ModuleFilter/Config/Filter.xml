@@ -6,15 +6,15 @@
   <Logger Name="Silkroad.Plugin.Farm" LogLevel="Trace" />
   <!--TODO: Have plugins create their own logger-->
 
-  <Plugin Name="Silkroad.Plugin.Global" ServiceType="GlobalManager" />
-  <Plugin Name="Silkroad.Plugin.Machine" ServiceType="MachineManager" />
-  <Plugin Name="Silkroad.Plugin.Gateway" ServiceType="GatewayServer" />
-  <Plugin Name="Silkroad.Plugin.Download" ServiceType="DownloadServer" />
-  <Plugin Name="Silkroad.Plugin.Farm" ServiceType="FarmManager" />
-  <Plugin Name="Silkroad.Plugin.Agent" ServiceType="AgentServer" />
-  <Plugin Name="Silkroad.Plugin.Shard" ServiceType="SR_ShardManager" />
-  <Plugin Name="Silkroad.Plugin.Game" ServiceType="SR_GameServer" />
-  <Plugin Name="Silkroad.Plugin.SMC" ServiceType="SMC" />
+  <Plugin Index="0" Name="Silkroad.Plugin.Global" ServiceType="GlobalManager" />
+  <Plugin Index="1" Name="Silkroad.Plugin.Machine" ServiceType="MachineManager" />
+  <Plugin Index="2" Name="Silkroad.Plugin.SMC" ServiceType="SMC" />
+  <Plugin Index="3" Name="Silkroad.Plugin.Gateway" ServiceType="GatewayServer" />
+  <Plugin Index="4" Name="Silkroad.Plugin.Download" ServiceType="DownloadServer" />
+  <Plugin Index="5" Name="Silkroad.Plugin.Farm" ServiceType="FarmManager" />
+  <Plugin Index="6" Name="Silkroad.Plugin.Agent" ServiceType="AgentServer" />
+  <Plugin Index="7" Name="Silkroad.Plugin.Shard" ServiceType="SR_ShardManager" />
+  <Plugin Index="8" Name="Silkroad.Plugin.Game" ServiceType="SR_GameServer" />
 
   <Service Name="GlobalManager #01" Type="GlobalManager" IP ="192.168.178.15" Port="20000">
     <Security Blowfish="true" CRC="false" Handshake="true" />

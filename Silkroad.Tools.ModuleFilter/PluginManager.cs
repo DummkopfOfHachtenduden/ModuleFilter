@@ -1,11 +1,12 @@
 ﻿using Silkroad.Framework.Common;
+using Silkroad.Framework.Common.Plugin;
 using Silkroad.Framework.Utility;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace Silkroad.Tools.ModuleProxy
+namespace Silkroad.Tools.ModuleFilter
 {
     internal class PluginManager
     {
@@ -41,11 +42,11 @@ namespace Silkroad.Tools.ModuleProxy
 
                 try
                 {
-                    var asmName = new AssemblyName
+                    var assemblyName = new AssemblyName
                     {
                         CodeBase = file.Name
                     };
-                    var asm = _domain.Load(asmName);
+                    var asm = _domain.Load(assemblyName);
                     var type = asm.GetType(kvp.Key + ".Plugin");
 
                     StaticLogger.Instance.Info("{0} ({1}) successfully loaded", file.Name, asm.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version ?? "0.0.0.0");

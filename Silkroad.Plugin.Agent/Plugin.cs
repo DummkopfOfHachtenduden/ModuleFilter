@@ -1,4 +1,5 @@
 ﻿using Silkroad.Framework.Common;
+using Silkroad.Framework.Common.Plugin;
 
 namespace Silkroad.Plugin.Agent
 {

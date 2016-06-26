@@ -152,7 +152,10 @@ namespace Silkroad.Framework.Common
                         bool result = myWorkItems[i].Run();
                     }
                 }
-                Thread.Sleep(1);
+                else
+                {
+                    Thread.Sleep(1);
+                }
             }
         }
     }

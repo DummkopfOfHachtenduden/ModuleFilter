@@ -1,4 +1,4 @@
-﻿//#define DEBUG_NET
+﻿#define DEBUG_NET
 
 using Silkroad.Framework.Common.Security;
 using Silkroad.Framework.Utility;
@@ -14,7 +14,7 @@ namespace Silkroad.Framework.Common
         //CERTIFICATOR = SERVER
         //MODULE = CLIENT
 
-        private const int MAX_BUFFER = 8192;
+        private const int MAX_BUFFER = 4096;
 
         #region Fields
 

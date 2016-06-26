@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Silkroad.Framework.Network\Silkroad.Framework.Common.csproj">
+    <ProjectReference Include="..\Silkroad.Framework.Common\Silkroad.Framework.Common.csproj">
       <Project>{846181e6-0314-4be3-8e6b-45db6e25f957}</Project>
       <Name>Silkroad.Framework.Common</Name>
     </ProjectReference>

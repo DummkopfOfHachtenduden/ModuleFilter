@@ -40,11 +40,17 @@ namespace Silkroad.Framework.Common
 
         private PacketResult CertificationReq(Session arg1, Packet arg2)
         {
+            var result = new PacketResult(PacketResultAction.Replace);
+            var response = new Packet(arg2.Opcode, arg2.Encrypted, arg2.Massive);
+
             _certificationManager.ReadReq(arg2);
 
-            //Additional spoofing possability here...
+            //_certificationManager.RequestIP = "192.168.178.10";
 
-            return PacketResult.None;
+            _certificationManager.WriteReq(response);
+
+            result.Add(response);
+            return result;
         }
 
         private PacketResult CertificationAck(Session arg1, Packet arg2)

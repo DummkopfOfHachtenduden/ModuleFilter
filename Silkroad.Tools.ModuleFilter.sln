@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Tools.ModuleFilter", "Silkroad.Tools.ModuleFilter\Silkroad.Tools.ModuleFilter.csproj", "{033B4F41-890B-4523-998C-A049C41149FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Framework.Common", "Silkroad.Framework.Network\Silkroad.Framework.Common.csproj", "{846181E6-0314-4BE3-8E6B-45DB6E25F957}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Framework.Common", "Silkroad.Framework.Common\Silkroad.Framework.Common.csproj", "{846181E6-0314-4BE3-8E6B-45DB6E25F957}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Silkroad.Framework.Utility", "Silkroad.Framework.Utility\Silkroad.Framework.Utility.csproj", "{B68F9D08-D251-4A1B-911D-6F19CA38DCCD}"
 EndProject

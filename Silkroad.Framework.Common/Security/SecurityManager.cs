@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silkroad.Framework.Utility;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
@@ -307,12 +308,9 @@ namespace Silkroad.Framework.Common.Security
         private TransferBuffer m_recv_buffer;
         private TransferBuffer m_current_buffer;
 
-        ///* Chernobyl: Fix massive msg fragmentation
         private ushort m_massive_count;
-
         private Packet m_massive_packet;
 
-        //*/
         private object m_class_lock;
 
         public string IdentityName { get { return m_identity_name; } }
@@ -911,10 +909,8 @@ namespace Silkroad.Framework.Common.Security
             m_recv_buffer = new TransferBuffer(8192); // must be at minimal 2 bytes!
             m_current_buffer = null;
 
-            /* Chernobyl: Fix massive msg fragmentation
             m_massive_count = 0;
             m_massive_packet = null;
-            */
 
             m_class_lock = new object();
         }
@@ -1147,7 +1143,8 @@ namespace Silkroad.Framework.Common.Security
                                 byte expected_count = GenerateCountByte(true);
                                 if (packet_security_count != expected_count)
                                 {
-                                    throw (new Exception($"[SecurityAPI::Recv] Count byte mismatch on {packet_opcode.ToString("X4")}."));
+                                    //throw (new Exception("[SecurityAPI::Recv] Count byte mismatch on {packet_opcode.ToString("X4")}."));
+                                    StaticLogger.Instance.Warn($"[SecurityAPI::Recv] Count byte mismatch on {packet_opcode.ToString("X4")}. (Expected: {expected_count}, Packet: {packet_security_count})");
                                 }
 
                                 if (packet_encrypted || (m_security_flags.security_bytes == 1 && m_security_flags.blowfish == 0))
@@ -1164,7 +1161,8 @@ namespace Silkroad.Framework.Common.Security
                                 byte expected_crc = GenerateCheckByte(buffer.Buffer);
                                 if (packet_security_crc != expected_crc)
                                 {
-                                    throw (new Exception("[SecurityAPI::Recv] CRC byte mismatch."));
+                                    //throw (new Exception("[SecurityAPI::Recv] CRC byte mismatch."));
+                                    StaticLogger.Instance.Warn($"[SecurityAPI::Recv] CRC byte mismatch on {packet_opcode.ToString("X4")}. (Expected: {expected_crc}, Packet: {packet_security_crc})");
                                 }
 
                                 buffer.Buffer[4] = 0;
@@ -1202,9 +1200,6 @@ namespace Silkroad.Framework.Common.Security
                                     throw (new Exception("[SecurityAPI::Recv] The client has not accepted the handshake."));
                                 }
                             }
-
-                            //Chernobyl: Asynchronous processing fix.
-                            //Doing this corrupts packets (because of fragmentation) !!!
 
                             if (packet_opcode == 0x600D) // Auto process massive messages for the user
                             {

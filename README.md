@@ -35,4 +35,4 @@ It's possible to have none or also multiple redirections.
 
 ### Service Overview
 (Click for fullscreen)
-![ModuleFilter](https://rawgit.com/DummkopfOfHachtenduden/ModuleFilter/master/ModuleFilter.svg)
+![ModuleFilter](https://rawgit.com/DummkopfOfHachtenduden/ModuleFilter/master/Documentation/ModuleFilter.svg)
